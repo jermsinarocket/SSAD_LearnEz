@@ -15,7 +15,7 @@ _global_script_class_icons={
 
 [application]
 
-config/name="LearnEz"
+config/name="LearnEz (Github)"
 run/main_scene="res://entities/Main/Launch.tscn"
 config/icon="res://icon.png"
 config/auto_accept_quit=false
