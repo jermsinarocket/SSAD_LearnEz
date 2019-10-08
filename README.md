@@ -1,1 +1,1 @@
-# CZ3003 Software Systems Analysis & Design - LearnEz
+# CZ3003 Software System Analysis & Design - LearnEz
