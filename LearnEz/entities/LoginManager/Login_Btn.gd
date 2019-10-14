@@ -2,6 +2,7 @@ extends TouchScreenButton
 
 var url = userModel.getBaseUrl()
 var result
+var responseCode
 var usernameLabel
 var passwordLabel 
 var loading_bg
@@ -43,8 +44,9 @@ func verifyUser():
 		yield(apiController, "request_completed")
 
 		result = apiController.getResult()
-
-		if(result['status'] == 200):
+		responseCode = apiController.getResponseCode()
+		
+		if(responseCode == 200):
 			getUserInfo(login_val)
 		else:			
 			loading_bg.hide()
@@ -54,21 +56,17 @@ func verifyUser():
 
 func getUserInfo(login_val):
 
-	var apiUrl = url + '/' + login_val
-	
-	apiController.apiCallGet(apiUrl) 
-	
-	yield(apiController, "request_completed")
-	
-	result = apiController.getResult()
 
 	loading_bg.hide()
 	loading_sprite.hide()
 	
+	#Update User Model
 	userModel.setUserID(result['userID'])
-	userModel.setEmail(result['email'])
-	userModel.setPassword(result['password'])
+	userModel.setUserEmail(result['email'])
+	userModel.setUserPassword(result['password'])
 	userModel.setUserRole(result['role'])
+	userModel.setUserAvatar(result['avatarURL'])
+	userModel.setUserAvatarID(result['avatarID'])
 
 	if(userModel.getUserRole() == "Student"):
 		root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
