@@ -63,6 +63,7 @@ animations = [ {
 } ]
 
 [node name="LoginController" type="Node2D"]
+editor/display_folded = true
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
 
@@ -224,6 +225,8 @@ text = "Forgot Password?"
 script = ExtResource( 7 )
 
 [node name="NoAccount_Popup" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
 position = Vector2( 517.501, 274.5 )
 scale = Vector2( 1.09961, 1.16211 )
 texture = ExtResource( 8 )
@@ -259,6 +262,8 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "You do not have an account with LearnEz. Please contact the system administrator to create an account for you"
 
 [node name="Forget_Password_Popup" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
 position = Vector2( 220.993, -137.507 )
 script = ExtResource( 11 )
 
@@ -351,6 +356,7 @@ scale = Vector2( 1.0977, 2.15206 )
 texture = ExtResource( 8 )
 
 [node name="Reset_by_ID" type="LineEdit" parent="."]
+visible = false
 margin_left = 257.894
 margin_top = 304.132
 margin_right = 1733.89
@@ -369,6 +375,7 @@ caret_blink_speed = 0.5
 script = ExtResource( 14 )
 
 [node name="Reset_by_Email" type="LineEdit" parent="."]
+visible = false
 margin_left = 256.816
 margin_top = 424.242
 margin_right = 1732.81
@@ -399,5 +406,5 @@ position = Vector2( 515.489, 296.939 )
 scale = Vector2( 1.30154, 1.30154 )
 frames = SubResource( 4 )
 animation = "loading"
-frame = 27
+frame = 23
 playing = true

@@ -1,10 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://entities/Menu/teacher_MainMenu_Controller.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
+[ext_resource path="res://images/menu_option.png" type="Texture" id=3]
+[ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=4]
 
 [node name="Teacher_MainMenu_Controller" type="Node2D"]
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 510.349, 301.084 )
+scale = Vector2( 0.853, 0.501 )
 texture = ExtResource( 2 )
+
+[node name="Settings" type="TouchScreenButton" parent="."]
+position = Vector2( 710.709, 411.574 )
+scale = Vector2( 0.078, 0.078 )
+normal = ExtResource( 3 )
+
+[node name="settingstxt" type="RichTextLabel" parent="."]
+margin_left = 781.845
+margin_top = 466.264
+margin_right = 995.845
+margin_bottom = 568.264
+rect_scale = Vector2( 0.7, 0.7 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0.839216, 0.329412, 0.329412, 1 )
+text = "Settings"

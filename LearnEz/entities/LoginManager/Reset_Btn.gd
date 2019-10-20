@@ -7,4 +7,6 @@ func _ready():
 
 func reset_password():
 	get_parent().hide()
+	get_parent().get_parent().get_node("Reset_by_ID").hide()
+	get_parent().get_parent().get_node("Reset_by_Email").hide()
 	print("Password Reset")

@@ -10,7 +10,7 @@
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 512.019, 301.084 )
+position = Vector2( 510.349, 301.084 )
 scale = Vector2( 0.853, 0.501 )
 texture = ExtResource( 2 )
 
@@ -91,7 +91,7 @@ bbcode_text = "Assignments"
 text = "Assignments"
 scroll_active = false
 
-[node name="leaderboardtxt" type="RichTextLabel" parent="."]
+[node name="settingstxt" type="RichTextLabel" parent="."]
 margin_left = 793.788
 margin_top = 452.056
 margin_right = 1133.79
@@ -121,7 +121,7 @@ Board
 "
 scroll_active = false
 
-[node name="settingstxt" type="RichTextLabel" parent="."]
+[node name="leaderboardtxt" type="RichTextLabel" parent="."]
 margin_left = 72.7893
 margin_top = 457.498
 margin_right = 412.789

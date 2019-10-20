@@ -32,8 +32,8 @@ func verifyUser():
 
 	if(login_val != "" && pass_val != ""):
 		
-		#loading_bg.show()
-		#loading_sprite.show()
+		loading_bg.show()
+		loading_sprite.show()
 		
 		usernameLabel.hide()
 		passwordLabel.hide()
@@ -56,7 +56,6 @@ func verifyUser():
 
 func getUserInfo(login_val):
 
-
 	loading_bg.hide()
 	loading_sprite.hide()
 	
@@ -67,8 +66,10 @@ func getUserInfo(login_val):
 	userModel.setUserRole(result['role'])
 	userModel.setUserAvatar(result['avatarURL'])
 	userModel.setUserAvatarID(result['avatarID'])
+	userModel.setUserName(result['name'])
 
 	if(userModel.getUserRole() == "Student"):
+		userModel.setUserGroup(result['userGroup'])
 		root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
 	else:
 		root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")

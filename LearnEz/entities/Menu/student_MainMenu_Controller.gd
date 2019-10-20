@@ -16,7 +16,6 @@ func _ready():
 #    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
 #        root.return_to_last()
 
-
 func playgame_pressed():
 	print("playgame")
 	
@@ -36,6 +35,5 @@ func leaderboard_pressed():
 func discussionboard_pressed():
 	print("discussionboard")	
 	
-
 func settings_pressed():
 	root.switch_scene("res://entities/Settings/SettingsController.tscn")
