@@ -1,9 +1,9 @@
 extends TouchScreenButton
 
-
+#Handles Reset Passwordb
 func _ready():
 	self.connect("pressed",self, "reset_password")
-	pass # Replace with function body.
+	pass
 
 func reset_password():
 	get_parent().hide()

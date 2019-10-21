@@ -1,5 +1,6 @@
 extends TouchScreenButton
 
+#Handles Login
 var url = userModel.getBaseUrl()
 var result
 var responseCode
@@ -15,6 +16,8 @@ func _ready():
 	loading_sprite = get_parent().get_node("Loading_sprite")
 	connect("pressed",self,"verifyUser")
 
+#Verify User Input
+#If verified, get User Data from Database
 func verifyUser():
 
 	var login_val = get_parent().get_node("Login_Input").text
@@ -54,12 +57,12 @@ func verifyUser():
 			get_parent().get_node("NoAccount_Popup").show()
 
 
+#Update the User Model
 func getUserInfo(login_val):
 
 	loading_bg.hide()
 	loading_sprite.hide()
 	
-	#Update User Model
 	userModel.setUserID(result['userID'])
 	userModel.setUserEmail(result['email'])
 	userModel.setUserPassword(result['password'])

@@ -1,10 +1,10 @@
 extends Sprite
 
-
+#Handles Forget Password Popup
 func _ready():
 	self.hide()
 	$Close_Btn.connect("pressed",self,"on_button_pressed")
-	pass # Replace with function body.
+	pass 
 
 func on_button_pressed():
 	get_parent().get_node("Reset_by_Email").hide()

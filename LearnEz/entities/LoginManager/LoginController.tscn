@@ -1,4 +1,4 @@
-[gd_scene load_steps=50 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://entities/LoginManager/loginController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -6,45 +6,42 @@
 [ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=4]
 [ext_resource path="res://images/button_login.png" type="Texture" id=5]
 [ext_resource path="res://entities/LoginManager/Login_Btn.gd" type="Script" id=6]
-[ext_resource path="res://entities/LoginManager/Forget_Password_Btn.gd" type="Script" id=7]
-[ext_resource path="res://images/modal_box.png" type="Texture" id=8]
-[ext_resource path="res://entities/LoginManager/noAccount_Popup.gd" type="Script" id=9]
-[ext_resource path="res://images/close_button.png" type="Texture" id=10]
-[ext_resource path="res://entities/LoginManager/Forget_Password.gd" type="Script" id=11]
-[ext_resource path="res://images/button_reset.png" type="Texture" id=12]
-[ext_resource path="res://entities/LoginManager/Reset_Btn.gd" type="Script" id=13]
-[ext_resource path="res://entities/LoginManager/reset_by_ID.gd" type="Script" id=14]
-[ext_resource path="res://entities/LoginManager/reset_by_Email.gd" type="Script" id=15]
-[ext_resource path="res://images/frames/loading/frame-0.png" type="Texture" id=16]
-[ext_resource path="res://images/frames/loading/frame-1.png" type="Texture" id=17]
-[ext_resource path="res://images/frames/loading/frame-2.png" type="Texture" id=18]
-[ext_resource path="res://images/frames/loading/frame-3.png" type="Texture" id=19]
-[ext_resource path="res://images/frames/loading/frame-4.png" type="Texture" id=20]
-[ext_resource path="res://images/frames/loading/frame-5.png" type="Texture" id=21]
-[ext_resource path="res://images/frames/loading/frame-6.png" type="Texture" id=22]
-[ext_resource path="res://images/frames/loading/frame-7.png" type="Texture" id=23]
-[ext_resource path="res://images/frames/loading/frame-8.png" type="Texture" id=24]
-[ext_resource path="res://images/frames/loading/frame-9.png" type="Texture" id=25]
-[ext_resource path="res://images/frames/loading/frame-10.png" type="Texture" id=26]
-[ext_resource path="res://images/frames/loading/frame-11.png" type="Texture" id=27]
-[ext_resource path="res://images/frames/loading/frame-12.png" type="Texture" id=28]
-[ext_resource path="res://images/frames/loading/frame-13.png" type="Texture" id=29]
-[ext_resource path="res://images/frames/loading/frame-14.png" type="Texture" id=30]
-[ext_resource path="res://images/frames/loading/frame-15.png" type="Texture" id=31]
-[ext_resource path="res://images/frames/loading/frame-16.png" type="Texture" id=32]
-[ext_resource path="res://images/frames/loading/frame-17.png" type="Texture" id=33]
-[ext_resource path="res://images/frames/loading/frame-18.png" type="Texture" id=34]
-[ext_resource path="res://images/frames/loading/frame-19.png" type="Texture" id=35]
-[ext_resource path="res://images/frames/loading/frame-20.png" type="Texture" id=36]
-[ext_resource path="res://images/frames/loading/frame-21.png" type="Texture" id=37]
-[ext_resource path="res://images/frames/loading/frame-22.png" type="Texture" id=38]
-[ext_resource path="res://images/frames/loading/frame-23.png" type="Texture" id=39]
-[ext_resource path="res://images/frames/loading/frame-24.png" type="Texture" id=40]
-[ext_resource path="res://images/frames/loading/frame-25.png" type="Texture" id=41]
-[ext_resource path="res://images/frames/loading/frame-26.png" type="Texture" id=42]
-[ext_resource path="res://images/frames/loading/frame-27.png" type="Texture" id=43]
-[ext_resource path="res://images/frames/loading/frame-28.png" type="Texture" id=44]
-[ext_resource path="res://images/frames/loading/frame-29.png" type="Texture" id=45]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=7]
+[ext_resource path="res://entities/LoginManager/noAccount_Popup.gd" type="Script" id=8]
+[ext_resource path="res://images/close_button.png" type="Texture" id=9]
+[ext_resource path="res://entities/LoginManager/Forget_Password.gd" type="Script" id=10]
+[ext_resource path="res://images/button_reset.png" type="Texture" id=11]
+[ext_resource path="res://entities/LoginManager/Reset_Btn.gd" type="Script" id=12]
+[ext_resource path="res://images/frames/loading/frame-0.png" type="Texture" id=13]
+[ext_resource path="res://images/frames/loading/frame-1.png" type="Texture" id=14]
+[ext_resource path="res://images/frames/loading/frame-2.png" type="Texture" id=15]
+[ext_resource path="res://images/frames/loading/frame-3.png" type="Texture" id=16]
+[ext_resource path="res://images/frames/loading/frame-4.png" type="Texture" id=17]
+[ext_resource path="res://images/frames/loading/frame-5.png" type="Texture" id=18]
+[ext_resource path="res://images/frames/loading/frame-6.png" type="Texture" id=19]
+[ext_resource path="res://images/frames/loading/frame-7.png" type="Texture" id=20]
+[ext_resource path="res://images/frames/loading/frame-8.png" type="Texture" id=21]
+[ext_resource path="res://images/frames/loading/frame-9.png" type="Texture" id=22]
+[ext_resource path="res://images/frames/loading/frame-10.png" type="Texture" id=23]
+[ext_resource path="res://images/frames/loading/frame-11.png" type="Texture" id=24]
+[ext_resource path="res://images/frames/loading/frame-12.png" type="Texture" id=25]
+[ext_resource path="res://images/frames/loading/frame-13.png" type="Texture" id=26]
+[ext_resource path="res://images/frames/loading/frame-14.png" type="Texture" id=27]
+[ext_resource path="res://images/frames/loading/frame-15.png" type="Texture" id=28]
+[ext_resource path="res://images/frames/loading/frame-16.png" type="Texture" id=29]
+[ext_resource path="res://images/frames/loading/frame-17.png" type="Texture" id=30]
+[ext_resource path="res://images/frames/loading/frame-18.png" type="Texture" id=31]
+[ext_resource path="res://images/frames/loading/frame-19.png" type="Texture" id=32]
+[ext_resource path="res://images/frames/loading/frame-20.png" type="Texture" id=33]
+[ext_resource path="res://images/frames/loading/frame-21.png" type="Texture" id=34]
+[ext_resource path="res://images/frames/loading/frame-22.png" type="Texture" id=35]
+[ext_resource path="res://images/frames/loading/frame-23.png" type="Texture" id=36]
+[ext_resource path="res://images/frames/loading/frame-24.png" type="Texture" id=37]
+[ext_resource path="res://images/frames/loading/frame-25.png" type="Texture" id=38]
+[ext_resource path="res://images/frames/loading/frame-26.png" type="Texture" id=39]
+[ext_resource path="res://images/frames/loading/frame-27.png" type="Texture" id=40]
+[ext_resource path="res://images/frames/loading/frame-28.png" type="Texture" id=41]
+[ext_resource path="res://images/frames/loading/frame-29.png" type="Texture" id=42]
 
 [sub_resource type="StyleBoxLine" id=1]
 
@@ -56,14 +53,13 @@ thickness = 4
 
 [sub_resource type="SpriteFrames" id=4]
 animations = [ {
-"frames": [ ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ), ExtResource( 43 ), ExtResource( 44 ), ExtResource( 45 ) ],
+"frames": [ ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 23 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 26 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 31 ), ExtResource( 32 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 35 ), ExtResource( 36 ), ExtResource( 37 ), ExtResource( 38 ), ExtResource( 39 ), ExtResource( 40 ), ExtResource( 41 ), ExtResource( 42 ) ],
 "loop": true,
 "name": "loading",
 "speed": 30.0
 } ]
 
 [node name="LoginController" type="Node2D"]
-editor/display_folded = true
 position = Vector2( 1, 0 )
 script = ExtResource( 1 )
 
@@ -150,6 +146,7 @@ text = "PASSWORD
 scroll_active = false
 
 [node name="username_empty_label" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 346.89
 margin_top = 432.813
 margin_right = 1096.89
@@ -160,6 +157,7 @@ custom_colors/default_color = Color( 0.862745, 0.0352941, 0.0352941, 1 )
 text = "Please input your Username"
 
 [node name="password_empty_label" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 346.212
 margin_top = 454.458
 margin_right = 1096.21
@@ -222,21 +220,19 @@ custom_colors/default_color = Color( 0.172549, 0.517647, 0.596078, 1 )
 bbcode_enabled = true
 bbcode_text = "[url={\"data\"=\"\"}]Forgot Password?[/url]"
 text = "Forgot Password?"
-script = ExtResource( 7 )
 
 [node name="NoAccount_Popup" type="Sprite" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 517.501, 274.5 )
 scale = Vector2( 1.09961, 1.16211 )
-texture = ExtResource( 8 )
-script = ExtResource( 9 )
+texture = ExtResource( 7 )
+script = ExtResource( 8 )
 
 [node name="Close_Btn" type="TouchScreenButton" parent="NoAccount_Popup"]
 position = Vector2( 219.967, -109.483 )
 scale = Vector2( 0.402976, 0.390742 )
 z_index = 1
-normal = ExtResource( 10 )
+normal = ExtResource( 9 )
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="NoAccount_Popup"]
 margin_left = -236.882
@@ -262,23 +258,22 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "You do not have an account with LearnEz. Please contact the system administrator to create an account for you"
 
 [node name="Forget_Password_Popup" type="Sprite" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 220.993, -137.507 )
-script = ExtResource( 11 )
+script = ExtResource( 10 )
 
 [node name="Close_Btn" type="TouchScreenButton" parent="Forget_Password_Popup"]
 position = Vector2( 533.125, 295.937 )
 scale = Vector2( 0.402976, 0.390742 )
 z_index = 1
-normal = ExtResource( 10 )
+normal = ExtResource( 9 )
 
 [node name="Reset_Btn" type="TouchScreenButton" parent="Forget_Password_Popup"]
 position = Vector2( 413.133, 636.496 )
 scale = Vector2( 0.205039, 0.205039 )
 z_index = 1
-normal = ExtResource( 12 )
-script = ExtResource( 13 )
+normal = ExtResource( 11 )
+script = ExtResource( 12 )
 
 [node name="RichTextLabel7" type="RichTextLabel" parent="Forget_Password_Popup"]
 margin_left = 32.2278
@@ -353,7 +348,7 @@ scroll_active = false
 show_behind_parent = true
 position = Vector2( 295.61, 504.951 )
 scale = Vector2( 1.0977, 2.15206 )
-texture = ExtResource( 8 )
+texture = ExtResource( 7 )
 
 [node name="Reset_by_ID" type="LineEdit" parent="."]
 visible = false
@@ -372,7 +367,6 @@ placeholder_text = "Enter your Matriculation Number or Staff ID"
 placeholder_alpha = 1.0
 caret_blink = true
 caret_blink_speed = 0.5
-script = ExtResource( 14 )
 
 [node name="Reset_by_Email" type="LineEdit" parent="."]
 visible = false
@@ -390,7 +384,6 @@ placeholder_text = "Enter your Email Address"
 placeholder_alpha = 1.0
 caret_blink = true
 caret_blink_speed = 0.5
-script = ExtResource( 15 )
 
 [node name="Loading_bg" type="ColorRect" parent="."]
 visible = false
@@ -406,5 +399,5 @@ position = Vector2( 515.489, 296.939 )
 scale = Vector2( 1.30154, 1.30154 )
 frames = SubResource( 4 )
 animation = "loading"
-frame = 23
+frame = 24
 playing = true
