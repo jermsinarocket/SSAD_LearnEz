@@ -48,7 +48,7 @@ position = Vector2( 266.387, 220.357 )
 scale = Vector2( 2.71186, 2.5487 )
 frames = ExtResource( 4 )
 animation = "avatar3"
-frame = 4
+frame = 2
 playing = true
 
 [node name="ChangeAvatar_btn" type="TouchScreenButton" parent="."]
@@ -139,6 +139,17 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Total Score:"
 scroll_active = false
 
+[node name="currency_lbl" type="RichTextLabel" parent="."]
+margin_left = 501.938
+margin_top = 347.934
+margin_right = 1068.94
+margin_bottom = 424.934
+rect_scale = Vector2( 0.7, 0.7 )
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Currency:"
+scroll_active = false
+
 [node name="name_2" type="RichTextLabel" parent="."]
 margin_left = 618.158
 margin_top = 18.2277
@@ -215,6 +226,20 @@ bbcode_text = "score"
 text = "score"
 scroll_active = false
 
+[node name="currency" type="RichTextLabel" parent="."]
+margin_left = 665.136
+margin_top = 353.397
+margin_right = 1336.14
+margin_bottom = 423.397
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = ExtResource( 6 )
+custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )
+bbcode_enabled = true
+bbcode_text = "score"
+text = "currency
+"
+scroll_active = false
+
 [node name="changepassword_btn" type="TouchScreenButton" parent="."]
 position = Vector2( 557.524, 438.479 )
 scale = Vector2( 0.420073, 0.420073 )
@@ -259,6 +284,7 @@ z_index = 1
 normal = ExtResource( 12 )
 
 [node name="change_password_box" type="Sprite" parent="."]
+editor/display_folded = true
 visible = false
 show_behind_parent = true
 position = Vector2( 577.627, 235.766 )
@@ -369,6 +395,8 @@ scale = Vector2( 0.337846, 0.19095 )
 normal = ExtResource( 14 )
 
 [node name="password_updated_box" type="Sprite" parent="."]
+editor/display_folded = true
+visible = false
 show_behind_parent = true
 position = Vector2( 567.76, 293.867 )
 scale = Vector2( 1.43098, 0.525944 )

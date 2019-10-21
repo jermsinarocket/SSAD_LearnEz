@@ -11,6 +11,7 @@ var userRole
 var userAvatarID
 var userAvatar
 var userGroup
+var userCurrency
 
 func getBaseUrl():
 	return baseUrl
@@ -38,7 +39,10 @@ func setUserRole(userRole):
 
 func setUserGroup(userGroup):
 	self.userGroup = userGroup
-	
+
+func setUserCurrency(userCurrency):
+	self.userCurrency = userCurrency
+		
 func getUserRole():
 	return userRole
 
@@ -62,3 +66,6 @@ func getUserAvatarID():
 	
 func getUserGroup():
 	return userGroup
+
+func getUserCurrency():
+	return userCurrency

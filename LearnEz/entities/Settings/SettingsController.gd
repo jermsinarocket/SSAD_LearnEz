@@ -35,6 +35,10 @@ func _ready():
 	$total_score.clear()
 	$total_score.hide()
 	
+	$currency_lbl.hide()
+	$currency.clear()
+	$currency.hide()
+	
 	if(userModel.getUserRole() == 'Student'):
 		$userid_lbl.append_bbcode("Matric Number:")
 		$userid.rect_position.x = 775.308
@@ -50,6 +54,10 @@ func _ready():
 		$total_score_lbl.show()
 		$total_score.show()
 		#$total_score.append_bbcode(userModel.getUserId())	
+		
+		$currency_lbl.show()
+		$currency.show()
+		$currency.append_bbcode('$' + userModel.getUserCurrency())	
 	else:
 		$userid_lbl.append_bbcode("Staff ID:")
 		$userid.rect_position.x = 648.851
