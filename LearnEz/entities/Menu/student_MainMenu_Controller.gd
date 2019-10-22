@@ -19,7 +19,7 @@ func _notification(what):
         root.return_to_last()
 
 func playgame_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/World/WorldController.tscn")
 	
 
 func usercreations_pressed():
