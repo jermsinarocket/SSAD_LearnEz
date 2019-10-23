@@ -8,13 +8,11 @@ func _ready():
 	$password_empty_label.hide()
 	$Loading_bg.hide()
 	$Loading_sprite.hide()
-	$Reset_by_Email.hide()
 	$Reset_by_ID.hide()
-	$Forget_Password_Btn.connect("meta_clicked", self, "_meta_clicked")
+	$Forget_Password_Btn.connect("meta_clicked", self, "forget_password_clicked")
 	pass 
 
-func _meta_clicked(meta):
-	$Reset_by_Email.show()
+func forget_password_clicked(meta):
 	$Reset_by_ID.show()
 	$Forget_Password_Popup.show()
 	
