@@ -259,7 +259,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "You do not have an account with LearnEz. Please contact the system administrator to create an account for you"
 
 [node name="Forget_Password_Popup" type="Sprite" parent="."]
-visible = false
 position = Vector2( 220.993, -137.507 )
 script = ExtResource( 10 )
 
@@ -348,7 +347,6 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="forget_pass_success_popup" type="Popup" parent="."]
-visible = true
 margin_left = 220.993
 margin_top = -137.507
 margin_right = 260.993
@@ -393,5 +391,5 @@ position = Vector2( 515.489, 296.939 )
 scale = Vector2( 1.30154, 1.30154 )
 frames = SubResource( 4 )
 animation = "loading"
-frame = 23
+frame = 21
 playing = true

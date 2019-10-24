@@ -48,7 +48,7 @@ position = Vector2( 266.387, 220.357 )
 scale = Vector2( 2.71186, 2.5487 )
 frames = ExtResource( 4 )
 animation = "avatar3"
-frame = 2
+frame = 5
 playing = true
 
 [node name="ChangeAvatar_btn" type="TouchScreenButton" parent="."]
@@ -236,8 +236,7 @@ custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )
 bbcode_enabled = true
 bbcode_text = "score"
-text = "currency
-"
+text = "score"
 scroll_active = false
 
 [node name="changepassword_btn" type="TouchScreenButton" parent="."]
@@ -395,8 +394,6 @@ scale = Vector2( 0.337846, 0.19095 )
 normal = ExtResource( 14 )
 
 [node name="password_updated_box" type="Sprite" parent="."]
-editor/display_folded = true
-visible = false
 show_behind_parent = true
 position = Vector2( 567.76, 293.867 )
 scale = Vector2( 1.43098, 0.525944 )
@@ -406,13 +403,13 @@ texture = ExtResource( 9 )
 script = ExtResource( 15 )
 
 [node name="password_update_lbl" type="RichTextLabel" parent="password_updated_box"]
-margin_left = -231.314
+margin_left = -235.389
 margin_top = -63.8309
-margin_right = 449.686
+margin_right = 445.611
 margin_bottom = 118.169
 rect_scale = Vector2( 0.7, 1.5 )
 custom_fonts/normal_font = ExtResource( 6 )
-text = "Password has been updated
+text = "Password has been changed
 "
 scroll_active = false
 
