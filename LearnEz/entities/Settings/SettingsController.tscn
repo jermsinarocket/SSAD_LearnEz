@@ -48,7 +48,6 @@ position = Vector2( 266.387, 220.357 )
 scale = Vector2( 2.71186, 2.5487 )
 frames = ExtResource( 4 )
 animation = "avatar3"
-frame = 5
 playing = true
 
 [node name="ChangeAvatar_btn" type="TouchScreenButton" parent="."]
@@ -394,6 +393,7 @@ scale = Vector2( 0.337846, 0.19095 )
 normal = ExtResource( 14 )
 
 [node name="password_updated_box" type="Sprite" parent="."]
+visible = false
 show_behind_parent = true
 position = Vector2( 567.76, 293.867 )
 scale = Vector2( 1.43098, 0.525944 )

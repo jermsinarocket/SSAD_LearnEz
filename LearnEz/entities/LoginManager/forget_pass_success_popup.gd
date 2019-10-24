@@ -8,3 +8,4 @@ func _ready():
 func close_popup():
 	self.hide()
 
+

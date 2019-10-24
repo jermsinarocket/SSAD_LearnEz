@@ -50,7 +50,7 @@ func verifyUser():
 		responseCode = apiController.getResponseCode()
 		
 		if(responseCode == 200):
-			getUserInfo(login_val)
+			getUserInfo()
 		else:			
 			loading_bg.hide()
 			loading_sprite.hide()
@@ -58,7 +58,7 @@ func verifyUser():
 
 
 #Update the User Model
-func getUserInfo(login_val):
+func getUserInfo():
 
 	loading_bg.hide()
 	loading_sprite.hide()

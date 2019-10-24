@@ -158,6 +158,7 @@ custom_colors/default_color = Color( 0.862745, 0.0352941, 0.0352941, 1 )
 text = "Please input your Username"
 
 [node name="password_empty_label" type="RichTextLabel" parent="."]
+visible = false
 margin_left = 346.212
 margin_top = 454.458
 margin_right = 1096.21
@@ -222,7 +223,6 @@ bbcode_text = "[url={\"data\"=\"\"}]Forgot Password?[/url]"
 text = "Forgot Password?"
 
 [node name="NoAccount_Popup" type="Sprite" parent="."]
-editor/display_folded = true
 visible = false
 position = Vector2( 517.501, 274.5 )
 scale = Vector2( 1.09961, 1.16211 )
@@ -329,7 +329,6 @@ scale = Vector2( 1.0977, 1.29769 )
 texture = ExtResource( 7 )
 
 [node name="Reset_by_ID" type="LineEdit" parent="."]
-visible = false
 margin_left = 257.894
 margin_top = 304.132
 margin_right = 1733.89
@@ -347,6 +346,7 @@ caret_blink = true
 caret_blink_speed = 0.5
 
 [node name="forget_pass_success_popup" type="Popup" parent="."]
+editor/display_folded = true
 margin_left = 220.993
 margin_top = -137.507
 margin_right = 260.993
@@ -391,5 +391,5 @@ position = Vector2( 515.489, 296.939 )
 scale = Vector2( 1.30154, 1.30154 )
 frames = SubResource( 4 )
 animation = "loading"
-frame = 21
+frame = 6
 playing = true
