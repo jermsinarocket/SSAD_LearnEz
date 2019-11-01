@@ -27,6 +27,9 @@ root="*res://entities/Global/Global .tscn"
 userModel="*res://entities/User/userModel.gd"
 apiController="*res://entities/Global/apiController.gd"
 worldModel="*res://entities/Global/worldModel.gd"
+userInventoryModel="*res://entities/User/userInventoryModel.gd"
+themeSong="*res://entities/Global/themeSong.gd"
+powerupModel="*res://entities/Global/powerupModel.gd"
 
 [display]
 

@@ -34,6 +34,7 @@ text = "SELECT WORLD
 scroll_active = false
 
 [node name="WorldBackground" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="World1" type="TouchScreenButton" parent="WorldBackground"]
 position = Vector2( 82.0782, 152.029 )
@@ -275,6 +276,7 @@ bbcode_enabled = true
 scroll_active = false
 
 [node name="WorldPlay" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="World1Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 148, 208 )

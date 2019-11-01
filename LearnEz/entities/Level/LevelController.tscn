@@ -1,0 +1,215 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://entities/Level/LevelController.gd" type="Script" id=1]
+[ext_resource path="res://images/background.jpg" type="Texture" id=2]
+[ext_resource path="res://images/logo_small.png" type="Texture" id=3]
+[ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=4]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=5]
+[ext_resource path="res://images/currency.png" type="Texture" id=6]
+[ext_resource path="res://images/50-50.png" type="Texture" id=7]
+[ext_resource path="res://images/addtime.png" type="Texture" id=8]
+[ext_resource path="res://entities/Level/UserInventory.gd" type="Script" id=9]
+[ext_resource path="res://entities/Level/BuyPowerUp.gd" type="Script" id=10]
+[ext_resource path="res://images/close_button.png" type="Texture" id=11]
+[ext_resource path="res://images/modal_window.png" type="Texture" id=12]
+[ext_resource path="res://images/coins.png" type="Texture" id=13]
+
+[node name="LevelController" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 513.491, 301.164 )
+scale = Vector2( 0.855375, 0.502 )
+texture = ExtResource( 2 )
+
+[node name="Logo" type="Sprite" parent="."]
+position = Vector2( 179.55, 78.85 )
+texture = ExtResource( 3 )
+
+[node name="WorldNumberLbl" type="RichTextLabel" parent="."]
+margin_left = 323.0
+margin_top = 61.0
+margin_right = 1086.0
+margin_bottom = 133.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]World 1[/center]"
+text = "World 1"
+scroll_active = false
+
+[node name="WorldNameLbl" type="RichTextLabel" parent="."]
+margin_left = 313.0
+margin_top = 99.0
+margin_right = 1263.0
+margin_bottom = 171.0
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]World 1[/center]"
+text = "World 1"
+scroll_active = false
+
+[node name="Currency" type="Node" parent="."]
+
+[node name="background" type="Sprite" parent="Currency"]
+position = Vector2( 932.115, 77.2567 )
+scale = Vector2( 0.264201, 0.210641 )
+texture = ExtResource( 5 )
+
+[node name="currencyIcon" type="Sprite" parent="Currency"]
+position = Vector2( 837.693, 71.0377 )
+scale = Vector2( 0.149134, 0.149134 )
+texture = ExtResource( 6 )
+
+[node name="userCurrency" type="RichTextLabel" parent="Currency"]
+margin_left = 881.627
+margin_top = 54.0451
+margin_right = 1489.63
+margin_bottom = 117.045
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "$98989"
+text = "$98989"
+scroll_active = false
+
+[node name="Powerup" type="Node" parent="."]
+
+[node name="50-50btn" type="TouchScreenButton" parent="Powerup"]
+position = Vector2( 800.168, 114.955 )
+scale = Vector2( 0.107482, 0.107482 )
+normal = ExtResource( 7 )
+
+[node name="addtimebtn" type="TouchScreenButton" parent="Powerup"]
+position = Vector2( 880.327, 117 )
+scale = Vector2( 0.100263, 0.100263 )
+normal = ExtResource( 8 )
+
+[node name="UserInventory" type="Node" parent="."]
+script = ExtResource( 9 )
+
+[node name="Power1Lbl" type="RichTextLabel" parent="UserInventory"]
+margin_left = 837.734
+margin_top = 92.0
+margin_right = 868.734
+margin_bottom = 152.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0.74902, 0.317647, 0.368627, 1 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="Power2Lbl" type="RichTextLabel" parent="UserInventory"]
+margin_left = 914.092
+margin_top = 92.0
+margin_right = 945.092
+margin_bottom = 152.0
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0.74902, 0.317647, 0.368627, 1 )
+bbcode_enabled = true
+scroll_active = false
+
+[node name="BuyPowerUp" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+popup_exclusive = true
+script = ExtResource( 10 )
+
+[node name="Background" type="Sprite" parent="BuyPowerUp"]
+position = Vector2( 534.718, 326.914 )
+scale = Vector2( 0.543467, 2.18473 )
+texture = ExtResource( 5 )
+
+[node name="CloseBtn" type="TouchScreenButton" parent="BuyPowerUp"]
+position = Vector2( 642.905, 113.04 )
+scale = Vector2( 0.379531, 0.379531 )
+normal = ExtResource( 11 )
+
+[node name="SelectedPowerUpImg" type="Control" parent="BuyPowerUp"]
+
+[node name="PowerBg1" type="Sprite" parent="BuyPowerUp/SelectedPowerUpImg"]
+position = Vector2( 534.98, 264.433 )
+scale = Vector2( 0.278371, 0.278371 )
+texture = ExtResource( 7 )
+
+[node name="PowerBg2" type="Sprite" parent="BuyPowerUp/SelectedPowerUpImg"]
+position = Vector2( 532.098, 265.132 )
+scale = Vector2( 0.29049, 0.29049 )
+texture = ExtResource( 8 )
+
+[node name="quantityLbl" type="RichTextLabel" parent="BuyPowerUp"]
+margin_left = 410.905
+margin_top = 150.416
+margin_right = 891.905
+margin_bottom = 225.416
+rect_scale = Vector2( 0.5, 0.5 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]You have: 10"
+text = "You have: 10"
+scroll_active = false
+
+[node name="nameLbl" type="RichTextLabel" parent="BuyPowerUp"]
+margin_left = 397.0
+margin_top = 343.0
+margin_right = 859.0
+margin_bottom = 421.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center]Fifty-Fifty"
+text = "Fifty-Fifty"
+scroll_active = false
+
+[node name="descriptionLbl" type="RichTextLabel" parent="BuyPowerUp"]
+margin_left = 396.0
+margin_top = 385.0
+margin_right = 1093.0
+margin_bottom = 513.0
+rect_scale = Vector2( 0.4, 0.4 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]Description"
+text = "Description"
+scroll_active = false
+
+[node name="buyBtn" type="TouchScreenButton" parent="BuyPowerUp"]
+position = Vector2( 460.774, 445.706 )
+scale = Vector2( 0.136284, 0.0530272 )
+normal = ExtResource( 12 )
+
+[node name="currency" type="Sprite" parent="BuyPowerUp/buyBtn"]
+position = Vector2( 199.11, 364.005 )
+scale = Vector2( 0.332487, 1.21585 )
+texture = ExtResource( 13 )
+
+[node name="cost" type="RichTextLabel" parent="BuyPowerUp/buyBtn"]
+margin_left = 340.91
+margin_top = 49.9727
+margin_right = 433.91
+margin_bottom = 125.973
+rect_scale = Vector2( 7, 10 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0.406738, 0.0762634, 0.0762634, 1 )
+bbcode_enabled = true
+bbcode_text = "[center]900[/center]"
+text = "900"
+scroll_active = false
+
+[node name="ErrorLbl" type="RichTextLabel" parent="BuyPowerUp"]
+visible = false
+margin_left = 453.619
+margin_top = 485.603
+margin_right = 902.619
+margin_bottom = 557.603
+rect_scale = Vector2( 0.4, 0.4 )
+custom_fonts/normal_font = ExtResource( 4 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
+text = "Not Enough Coins!"
+scroll_active = false

@@ -3,7 +3,7 @@ extends Node
 #User Model
 
 var baseUrl = "user"
-var userID = '1'
+var userID
 var userEmail
 var userName
 var userPassword

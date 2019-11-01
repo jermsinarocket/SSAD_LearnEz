@@ -57,7 +57,7 @@ func _ready():
 		
 		$currency_lbl.show()
 		$currency.show()
-		$currency.append_bbcode('$' + userModel.getUserCurrency())	
+		$currency.append_bbcode('$' + str(userModel.getUserCurrency()))	
 	else:
 		$userid_lbl.append_bbcode("Staff ID:")
 		$userid.rect_position.x = 648.851

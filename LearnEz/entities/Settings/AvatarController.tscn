@@ -116,7 +116,6 @@ scale = Vector2( 0.631579, 0.631579 )
 normal = ExtResource( 17 )
 
 [node name="confirmation_popup" type="Popup" parent="."]
-editor/display_folded = true
 margin_left = -53.2
 margin_top = -3.80002
 margin_right = -13.2

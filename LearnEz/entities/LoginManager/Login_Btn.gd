@@ -73,7 +73,7 @@ func getUserInfo():
 
 	if(userModel.getUserRole() == "Student"):
 		userModel.setUserGroup(result['userGroup'])
-		userModel.setUserCurrency(result['currency'])
+		userModel.setUserCurrency(int(result['currency']))
 		root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
 	else:
 		root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")

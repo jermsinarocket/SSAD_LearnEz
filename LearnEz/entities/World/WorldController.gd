@@ -48,7 +48,7 @@ func setWorldNames():
 func handleSelectWorld(button):
 	worldModel.setSelectedWorld(button.name)
 	worldModel.setSelectedWorldIdx(button.get_index())
-	print("pressed")
+	root.switch_scene("res://entities/Level/LevelController.tscn")
 
 func setUnlocked():
 	for locks in $WorldUnlockedStatus.get_children():
