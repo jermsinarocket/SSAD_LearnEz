@@ -26,6 +26,7 @@ config/quit_on_go_back=false
 root="*res://entities/Global/Global .tscn"
 userModel="*res://entities/User/userModel.gd"
 apiController="*res://entities/Global/apiController.gd"
+worldModel="*res://entities/Global/worldModel.gd"
 
 [display]
 
