@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/World/WorldController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -8,6 +8,8 @@
 [ext_resource path="res://images/worldNameBanner.png" type="Texture" id=6]
 [ext_resource path="res://images/lock.png" type="Texture" id=7]
 [ext_resource path="res://images/playbtn.png" type="Texture" id=8]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=9]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=10]
 
 [node name="WorldController" type="Node2D"]
 script = ExtResource( 1 )
@@ -307,3 +309,19 @@ normal = ExtResource( 8 )
 position = Vector2( 758.001, 432 )
 scale = Vector2( 0.130858, 0.130858 )
 normal = ExtResource( 8 )
+
+[node name="loading" type="Popup" parent="."]
+visible = true
+popup_exclusive = true
+
+[node name="loadingbg" type="Sprite" parent="loading"]
+position = Vector2( 510.619, 330.049 )
+scale = Vector2( 2.19116, 1 )
+texture = ExtResource( 9 )
+
+[node name="loadingani" type="AnimatedSprite" parent="loading"]
+position = Vector2( 511.949, 326.483 )
+frames = ExtResource( 10 )
+animation = "loading"
+frame = 27
+playing = true

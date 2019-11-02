@@ -30,6 +30,7 @@ worldModel="*res://entities/Global/worldModel.gd"
 userInventoryModel="*res://entities/User/userInventoryModel.gd"
 themeSong="*res://entities/Global/themeSong.gd"
 powerupModel="*res://entities/Global/powerupModel.gd"
+levelModel="*res://entities/Global/levelModel.gd"
 
 [display]
 

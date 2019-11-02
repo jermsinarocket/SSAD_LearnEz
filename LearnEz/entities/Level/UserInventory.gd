@@ -20,5 +20,5 @@ func loadUserInventory():
 		var idx = item.get_index()
 		item.clear()
 		item.append_bbcode(userInventoryModel.getQuantityByIdx(idx))
-	
-	get_parent().get_node("BuyPowerUp").hide()
+
+	get_parent().get_node("Loading").hide()

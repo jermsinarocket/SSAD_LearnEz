@@ -8,6 +8,7 @@ func _ready():
 	pass # Replace with function body.
 	
 func loadPowerupInformation():
+	
 	$ErrorLbl.hide()
 	
 	var selectedPowerIdx = powerupModel.getSelectedPowerupIdx()
@@ -30,12 +31,15 @@ func loadPowerupInformation():
 	pass
 
 func checkUserCurrency():
+	
+	
 	var userCurrency = userModel.getUserCurrency()
 	var powerUpCost = int(powerupModel.getSelectedPowerupCost())
 	var finalAmount
 	
 	if(userCurrency >= powerUpCost):
-		
+		self.hide()
+		get_parent().get_node("Loading").show()
 		finalAmount = userCurrency - powerUpCost
 		userModel.setUserCurrency(finalAmount)
 		

@@ -7,6 +7,8 @@ var responseCode
 func _ready():
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
+	$loading.popup()
+	
 	loadWorlds()
 	for button in $WorldBackground.get_children():
 		button.connect("pressed", self, "handleSelectWorld", [button])
@@ -66,4 +68,6 @@ func setUnlocked():
 				$WorldPlay.get_child(locks.get_index()).show()
 				$WorldPlay.get_child(locks.get_index()).set_block_signals(false)
 			locks.queue_free()
+			
+	$loading.hide()
 			
