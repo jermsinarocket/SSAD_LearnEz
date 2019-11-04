@@ -15,6 +15,8 @@ func loadLevelInformation():
 	$levelDescription.append_bbcode(levelModel.getLevelDescription(lvlIdx))
 	$userScore.clear()
 	$userScore.append_bbcode("Your Score: " + levelModel.getLevelScoreByIdx(lvlIdx))
+	$leaderboardInfo.clear()
+	loadLeaderboardInformation()
 
 func playGame():
 	print("Play Game")
@@ -22,3 +24,16 @@ func playGame():
 	
 func closeLevelInfo():
 	self.hide()
+
+func loadLeaderboardInformation():
+	var apiUrl = levelModel.getBaseUrl() + '/leaderboard/' + levelModel.getLevelIDByIdx(levelModel.selectedLevelIdx)
+	apiController.apiCallGet(apiUrl)
+	
+	yield(apiController, "request_completed")
+	var result = apiController.getResult()
+
+	var idx = 1
+	for item in result:
+		$leaderboardInfo.append_bbcode(str(idx) + ": " + item["name"] + "   " + item["score"] + "\n")
+		idx += 1
+	pass

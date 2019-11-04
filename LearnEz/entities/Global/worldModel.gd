@@ -34,7 +34,7 @@ func getWorldNameByIdx(idx):
 func getWorldUnlockStatus(idx):
 	return (unlockStatus[idx])['unlock']
 
-func getWorldScore(idx):
+func getWorldScoreByIdx(idx):
 	return (unlockStatus[idx])['score']
 	
 func getWorldIDbyIdx(idx):

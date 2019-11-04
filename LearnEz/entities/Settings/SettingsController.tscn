@@ -129,10 +129,10 @@ text = "Highest Stage Cleared:"
 scroll_active = false
 
 [node name="total_score_lbl" type="RichTextLabel" parent="."]
-margin_left = 500.772
-margin_top = 295.448
-margin_right = 1067.77
-margin_bottom = 372.448
+margin_left = 502.988
+margin_top = 324.257
+margin_right = 1069.99
+margin_bottom = 401.257
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -140,10 +140,10 @@ text = "Total Score:"
 scroll_active = false
 
 [node name="currency_lbl" type="RichTextLabel" parent="."]
-margin_left = 501.938
-margin_top = 347.934
-margin_right = 1068.94
-margin_bottom = 424.934
+margin_left = 504.154
+margin_top = 376.743
+margin_right = 1071.16
+margin_bottom = 453.743
 rect_scale = Vector2( 0.7, 0.7 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -201,11 +201,11 @@ text = "group"
 scroll_active = false
 
 [node name="highest_stage" type="RichTextLabel" parent="."]
-margin_left = 876.736
-margin_top = 244.496
-margin_right = 1547.74
-margin_bottom = 314.496
-rect_scale = Vector2( 0.6, 0.6 )
+margin_left = 505.0
+margin_top = 293.216
+margin_right = 1689.0
+margin_bottom = 363.216
+rect_scale = Vector2( 0.4, 0.4 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )
 bbcode_enabled = true
@@ -214,10 +214,10 @@ text = "stage"
 scroll_active = false
 
 [node name="total_score" type="RichTextLabel" parent="."]
-margin_left = 703.625
-margin_top = 299.745
-margin_right = 1374.63
-margin_bottom = 369.745
+margin_left = 705.841
+margin_top = 328.554
+margin_right = 1376.85
+margin_bottom = 398.554
 rect_scale = Vector2( 0.6, 0.6 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )
@@ -227,10 +227,10 @@ text = "score"
 scroll_active = false
 
 [node name="currency" type="RichTextLabel" parent="."]
-margin_left = 665.136
-margin_top = 353.397
-margin_right = 1336.14
-margin_bottom = 423.397
+margin_left = 667.352
+margin_top = 382.206
+margin_right = 1338.36
+margin_bottom = 452.206
 rect_scale = Vector2( 0.6, 0.6 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )

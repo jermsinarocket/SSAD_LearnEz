@@ -31,11 +31,10 @@ func assignments_pressed():
 	
 
 func leaderboard_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/Leaderboard/LeaderboardController.tscn")
 	
-
 func discussionboard_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")	
+	root.switch_scene("res://entities/Discussion/DiscussionBoardController.tscn")	
 	
 func settings_pressed():
 	root.switch_scene("res://entities/Settings/SettingsController.tscn")

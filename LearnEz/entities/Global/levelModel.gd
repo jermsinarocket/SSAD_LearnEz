@@ -39,7 +39,10 @@ func getLevelUnlockStatusByIdx(idx):
 
 func getLevelScoreByIdx(idx):
 	return (unlockStatus[idx])['score']
-	
+
+func getLevelIDByIdx(idx):
+	return (unlockStatus[idx])['levelID']
+		
 func getLevelDescription(idx):
 	return (levels[idx])['levelDescription']
 

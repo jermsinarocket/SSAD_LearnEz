@@ -17,6 +17,8 @@ func _ready():
 	for button in $WorldPlay.get_children():
 		button.set_block_signals(true)
 		button.hide()
+	for item in $Stars.get_children():
+		item.hide()
 	pass 
 
 func _notification(what):
@@ -54,20 +56,26 @@ func handleSelectWorld(button):
 
 func setUnlocked():
 	for locks in $WorldUnlockedStatus.get_children():
-		var unlockStatus = worldModel.getWorldUnlockStatus(locks.get_index())
-		$WorldScore.get_child(locks.get_index()).clear()
+		var idx = int(locks.get_index())
+		var unlockStatus = worldModel.getWorldUnlockStatus(idx)
+		var worldScore = int(worldModel.getWorldScoreByIdx(idx))
 		if(unlockStatus == '0'):
 			locks.show()
-			($WorldBackground.get_child(locks.get_index())).set_block_signals(true)
+			($WorldBackground.get_child(idx)).set_block_signals(true)
 		else:
-			var worldScore = worldModel.getWorldScore(locks.get_index())
-			if(worldScore != '0'):
-				var scoreStr = "[center] Score: " + worldScore + "[/center]"
-				$WorldScore.get_child(locks.get_index()).append_bbcode(scoreStr)
+			if(worldScore == 0):
+				$WorldPlay.get_child(idx).show()
+				$WorldPlay.get_child(idx).set_block_signals(false)
+				pass
 			else:
-				$WorldPlay.get_child(locks.get_index()).show()
-				$WorldPlay.get_child(locks.get_index()).set_block_signals(false)
-			locks.queue_free()
+				($Stars.get_child(idx)).show()
+				if(worldScore > 5 && worldScore < 1495):
+					($Stars.get_child(idx)).play("1star")
+				elif(worldScore > 1505 && worldScore < 2995):
+					($Stars.get_child(idx)).play("2star")
+				else:
+					($Stars.get_child(idx)).play("3star")
+				locks.queue_free()
 			
 	$loading.hide()
 			

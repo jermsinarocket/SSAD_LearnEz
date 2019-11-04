@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/World/WorldController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -7,9 +7,10 @@
 [ext_resource path="res://images/selectworldbg.png" type="Texture" id=5]
 [ext_resource path="res://images/worldNameBanner.png" type="Texture" id=6]
 [ext_resource path="res://images/lock.png" type="Texture" id=7]
-[ext_resource path="res://images/playbtn.png" type="Texture" id=8]
-[ext_resource path="res://images/modal_box.png" type="Texture" id=9]
-[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://images/frames/stars/stars.tres" type="SpriteFrames" id=8]
+[ext_resource path="res://images/playbtn.png" type="Texture" id=9]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=10]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=11]
 
 [node name="WorldController" type="Node2D"]
 script = ExtResource( 1 )
@@ -99,7 +100,6 @@ scale = Vector2( 1.41182, 0.841582 )
 texture = ExtResource( 6 )
 
 [node name="WorldTitlesText" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="World1Title" type="RichTextLabel" parent="WorldTitlesText"]
 modulate = Color( 0, 0, 0, 1 )
@@ -207,75 +207,44 @@ position = Vector2( 795.015, 450.416 )
 scale = Vector2( 0.223078, 0.223078 )
 texture = ExtResource( 7 )
 
-[node name="WorldScore" type="Node" parent="."]
+[node name="Stars" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="World1Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 88.0
-margin_top = 229.693
-margin_right = 465.0
-margin_bottom = 296.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star1" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 182.305, 243.675 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
-[node name="World2Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 400.471
-margin_top = 229.693
-margin_right = 777.471
-margin_bottom = 296.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star2" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 495.473, 242.773 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
-[node name="World3Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 694.367
-margin_top = 229.693
-margin_right = 1071.37
-margin_bottom = 296.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star3" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 792.396, 242.773 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
-[node name="World4Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 88.0
-margin_top = 457.693
-margin_right = 465.0
-margin_bottom = 524.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star4" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 178.895, 473.711 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
-[node name="World5Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 397.0
-margin_top = 457.693
-margin_right = 774.0
-margin_bottom = 524.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star5" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 497.309, 473.711 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
-[node name="World6Score" type="RichTextLabel" parent="WorldScore"]
-margin_left = 694.001
-margin_top = 457.693
-margin_right = 1071.0
-margin_bottom = 524.693
-rect_scale = Vector2( 0.5, 0.5 )
-custom_fonts/normal_font = ExtResource( 4 )
-custom_colors/default_color = Color( 0, 0, 0, 1 )
-bbcode_enabled = true
-scroll_active = false
+[node name="star6" type="AnimatedSprite" parent="Stars"]
+position = Vector2( 791.797, 473.711 )
+scale = Vector2( 0.7473, 0.7473 )
+frames = ExtResource( 8 )
+animation = "3star"
 
 [node name="WorldPlay" type="Node" parent="."]
 editor/display_folded = true
@@ -283,45 +252,45 @@ editor/display_folded = true
 [node name="World1Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 148, 208 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="World2Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 460, 208 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="World3Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 759.001, 208 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="World4Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 148, 432 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="World5Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 461, 432 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="World6Play" type="TouchScreenButton" parent="WorldPlay"]
 position = Vector2( 758.001, 432 )
 scale = Vector2( 0.130858, 0.130858 )
-normal = ExtResource( 8 )
+normal = ExtResource( 9 )
 
 [node name="loading" type="Popup" parent="."]
-visible = true
+editor/display_folded = true
 popup_exclusive = true
 
 [node name="loadingbg" type="Sprite" parent="loading"]
 position = Vector2( 510.619, 330.049 )
 scale = Vector2( 2.19116, 1 )
-texture = ExtResource( 9 )
+texture = ExtResource( 10 )
 
 [node name="loadingani" type="AnimatedSprite" parent="loading"]
 position = Vector2( 511.949, 326.483 )
-frames = ExtResource( 10 )
+frames = ExtResource( 11 )
 animation = "loading"
-frame = 27
+frame = 23
 playing = true

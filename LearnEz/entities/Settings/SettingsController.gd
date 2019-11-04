@@ -39,6 +39,7 @@ func _ready():
 	$currency.clear()
 	$currency.hide()
 	
+	
 	if(userModel.getUserRole() == 'Student'):
 		$userid_lbl.append_bbcode("Matric Number:")
 		$userid.rect_position.x = 775.308
@@ -49,14 +50,26 @@ func _ready():
 		
 		$highest_stage_lbl.show()
 		$highest_stage.show()
-		#$highest_stage.append_bbcode(userModel.getUserId())
 		
 		$total_score_lbl.show()
 		$total_score.show()
-		#$total_score.append_bbcode(userModel.getUserId())	
-		
+				
 		$currency_lbl.show()
 		$currency.show()
+		
+		var apiUrl = levelModel.getBaseUrl() +  '/user/highestLevelScore/' + userModel.getUserId() 
+		apiController.apiCallGet(apiUrl)
+		
+		yield(apiController, "request_completed")
+
+		var result = apiController.getResult()
+		
+		$highest_stage.append_bbcode(result["levelStage"] + ": " + result["levelName"])
+		
+
+		$total_score.append_bbcode(result["totalscore"])	
+
+		
 		$currency.append_bbcode('$' + str(userModel.getUserCurrency()))	
 	else:
 		$userid_lbl.append_bbcode("Staff ID:")

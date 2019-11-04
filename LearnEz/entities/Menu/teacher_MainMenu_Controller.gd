@@ -26,4 +26,4 @@ func performance_report_pressed():
 	root.switch_scene("res://entities/Settings/SettingsController.tscn")
 
 func discussion_board_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/Discussion/DiscussionBoardController.tscn")	

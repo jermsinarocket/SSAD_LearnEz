@@ -1,7 +1,6 @@
 extends Node
 
 #User Model
-
 var baseUrl = "user"
 var userID
 var userEmail
