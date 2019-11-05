@@ -68,12 +68,16 @@ func _ready():
 		
 
 		$total_score.append_bbcode(result["totalscore"])	
-
 		
 		$currency.append_bbcode('$' + str(userModel.getUserCurrency()))	
+		
 	else:
 		$userid_lbl.append_bbcode("Staff ID:")
 		$userid.rect_position.x = 648.851
+		$group_lbl.show()
+		$group.show()
+		for group in userModel.getUserGroup():
+			$group.append_bbcode(group['groupID'] + "\n")
 
 	
 func _notification(what):

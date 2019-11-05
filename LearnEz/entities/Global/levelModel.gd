@@ -1,6 +1,6 @@
 extends Node
 
-#World Model
+#Level Model
 var baseUrl = "level"
 var selectedLevel
 var selectedLevelIdx

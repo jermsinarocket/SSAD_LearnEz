@@ -48,7 +48,6 @@ position = Vector2( 266.387, 220.357 )
 scale = Vector2( 2.71186, 2.5487 )
 frames = ExtResource( 4 )
 animation = "avatar3"
-frame = 2
 playing = true
 
 [node name="ChangeAvatar_btn" type="TouchScreenButton" parent="."]
@@ -188,10 +187,10 @@ text = "email"
 scroll_active = false
 
 [node name="group" type="RichTextLabel" parent="."]
-margin_left = 625.05
-margin_top = 189.248
-margin_right = 1296.05
-margin_bottom = 259.248
+margin_left = 625.0
+margin_top = 189.0
+margin_right = 1296.0
+margin_bottom = 578.0
 rect_scale = Vector2( 0.6, 0.6 )
 custom_fonts/normal_font = ExtResource( 6 )
 custom_colors/default_color = Color( 0.811765, 0.0509804, 0.0509804, 1 )

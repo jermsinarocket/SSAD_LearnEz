@@ -60,8 +60,7 @@ func verifyUser():
 #Update the User Model
 func getUserInfo():
 
-	loading_bg.hide()
-	loading_sprite.hide()
+
 	
 	userModel.setUserID(result['userID'])
 	userModel.setUserEmail(result['email'])
@@ -74,7 +73,15 @@ func getUserInfo():
 	if(userModel.getUserRole() == "Student"):
 		userModel.setUserGroup(result['userGroup'])
 		userModel.setUserCurrency(int(result['currency']))
+		loading_bg.hide()
+		loading_sprite.hide()
 		root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
 	else:
+		var apiUrl = "group/" + userModel.getUserId()
+		apiController.apiCallGet(apiUrl)
+		yield(apiController, "request_completed")
+		userModel.setUserGroup(apiController.getResult())
+		loading_bg.hide()
+		loading_sprite.hide()
 		root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
 	pass

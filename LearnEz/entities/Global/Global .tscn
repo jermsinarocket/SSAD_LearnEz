@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://entities/Global/global .gd" type="Script" id=1]
 [ext_resource path="res://entities/Global/apiController.gd" type="Script" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://entities/Global/themeSong.gd" type="Script" id=7]
 [ext_resource path="res://entities/Global/powerupModel.gd" type="Script" id=8]
 [ext_resource path="res://entities/Global/levelModel.gd" type="Script" id=9]
+[ext_resource path="res://entities/Global/performanceModel.gd" type="Script" id=10]
 
 [node name="root" type="Node"]
 script = ExtResource( 1 )
@@ -34,3 +35,6 @@ script = ExtResource( 8 )
 
 [node name="levelModel" type="Node" parent="."]
 script = ExtResource( 9 )
+
+[node name="performanceModel" type="Node" parent="."]
+script = ExtResource( 10 )
