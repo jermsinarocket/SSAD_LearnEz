@@ -32,6 +32,7 @@ themeSong="*res://entities/Global/themeSong.gd"
 powerupModel="*res://entities/Global/powerupModel.gd"
 levelModel="*res://entities/Global/levelModel.gd"
 performanceModel="*res://entities/Global/performanceModel.gd"
+gameModel="*res://entities/Global/gameModel.gd"
 
 [display]
 

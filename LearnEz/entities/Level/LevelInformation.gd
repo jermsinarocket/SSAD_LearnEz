@@ -19,7 +19,7 @@ func loadLevelInformation():
 	loadLeaderboardInformation()
 
 func playGame():
-	print("Play Game")
+	root.switch_scene("res://entities/Game/Game.tscn")
 	self.hide()
 	
 func closeLevelInfo():

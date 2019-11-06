@@ -23,7 +23,7 @@ func playgame_pressed():
 	
 
 func usercreations_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/UCL/UCLView.tscn")
 	
 
 func assignments_pressed():

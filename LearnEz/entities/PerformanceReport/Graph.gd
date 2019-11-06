@@ -576,7 +576,7 @@ func _update_draw(object = null):
   update()
 
 # Utilitary functions
-const ordinary_factor = 10
+const ordinary_factor = 14
 const range_factor = 1000
 const units = ['', 'K', 'M', 'B', 'G']
 
@@ -610,7 +610,7 @@ func compute_ordinate_values(max_value, min_value):
       ratio = computed_ratio
       ordinate_values = []
 
-      for index in range(-6, 6):
+      for index in range(-9, 9):
         ordinate_values.push_back(5 * index * computed_ratio / ordinary_factor)
 
   # Keep only valid values

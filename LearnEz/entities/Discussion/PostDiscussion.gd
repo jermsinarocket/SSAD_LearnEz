@@ -39,7 +39,9 @@ func post_discussion_pressed():
 		var apiUrl = url + '/' + user_id
 		var data = {"title": discussion_title, "details": discussion_details, "time": time_created}
 		apiController.apiCallPost(data,apiUrl)
-
+		
+		apiController.apiCallPost(data,apiUrl)
+		
 		yield(apiController, "request_completed")
 		
 		var result = apiController.getResult()

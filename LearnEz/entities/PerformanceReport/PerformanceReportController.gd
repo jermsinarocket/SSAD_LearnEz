@@ -6,9 +6,10 @@ onready var chart_node = get_node('Graph')
 func _ready():
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
+	
 	loadClassOptions()
 	
-	$ClassOpt.connect("item_selected",self,"loadClassInformation")
+	$ClassOpt.connect("item_selected",self,"handleSelectClass")
 	
 	chart_node.initialize(chart_node.LABELS_TO_SHOW.NO_LABEL,
 	{
@@ -34,7 +35,7 @@ func loadClassOptions():
 		$ClassOpt.add_item(group['groupID'])
 		$ClassOpt.add_separator()
 
-func loadClassInformation(id):
+func handleSelectClass(id):
 	selectedClass = $ClassOpt.get_item_text(id)
 	loadStudentsInformation()
 	
@@ -51,6 +52,8 @@ func loadStudentsInformation():
 	for lbl in $StudentLbls.get_children():
 		$StudentLbls.remove_child(lbl)
 		
+	$loading.popup()	
+	
 	var apiURL = "group/students/" + selectedClass
 	
 	apiController.apiCallGet(apiURL)
@@ -80,7 +83,8 @@ func loadStudentsInformation():
 	loadGraph()
 		
 func handleSelectStudent(button):
-	print(button.get_index())
+	performanceModel.setSelectedStudentIdx(button.get_index())
+	root.switch_scene("res://entities/PerformanceReport/StudentPerformanceReport.tscn")
 	
 func loadGraph():
 	chart_node.clear_chart()
@@ -166,6 +170,7 @@ func loadGraph():
 	})
 	chart_node.set_max_values(5000)
 	chart_node.set_labels(7)
+	$loading.hide()
 
 func generateReport():
 	var url = apiController.baseUrl + "group/students/score/generatereport/" + selectedClass

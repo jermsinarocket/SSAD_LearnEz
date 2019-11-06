@@ -21,6 +21,9 @@ func setSelectedLevel(levelID):
 
 func setSelectedLevelIdx(idx):
 	self.selectedLevelIdx = idx
+
+func getSelectedLevelIdx():
+	return self.selectedLevelIdx
 	
 func getNumberOfLevels():
 	return levels.size()

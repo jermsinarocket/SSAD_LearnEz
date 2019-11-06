@@ -280,7 +280,6 @@ scale = Vector2( 0.130858, 0.130858 )
 normal = ExtResource( 9 )
 
 [node name="loading" type="Popup" parent="."]
-editor/display_folded = true
 popup_exclusive = true
 
 [node name="loadingbg" type="Sprite" parent="loading"]
@@ -292,5 +291,5 @@ texture = ExtResource( 10 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 11 )
 animation = "loading"
-frame = 23
+frame = 13
 playing = true

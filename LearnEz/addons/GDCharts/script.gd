@@ -17,7 +17,7 @@ const COLOR_LINE_RATIO = 0.5
 const LABEL_SPACE = Vector2(64.0, 32.0)
 
 export(Font) var label_font
-export(int, 6, 24) var MAX_VALUES = 12
+export(int, 6, 24) var MAX_VALUES = 30
 export(Texture) var dot_texture = preload('graph-plot-white.png')
 export(Color) var default_chart_color = Color('#ccffffff')
 export(Color) var grid_color = Color('#b111171c')
@@ -576,8 +576,8 @@ func _update_draw(object = null):
   update()
 
 # Utilitary functions
-const ordinary_factor = 10
-const range_factor = 1000
+const ordinary_factor = 25
+const range_factor = 10000
 const units = ['', 'K', 'M', 'B', 'G']
 
 func format(number, format_text_custom = '%.2f %s'):
@@ -610,7 +610,7 @@ func compute_ordinate_values(max_value, min_value):
       ratio = computed_ratio
       ordinate_values = []
 
-      for index in range(-6, 6):
+      for index in range(-8, 8):
         ordinate_values.push_back(5 * index * computed_ratio / ordinary_factor)
 
   # Keep only valid values

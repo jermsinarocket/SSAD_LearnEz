@@ -375,6 +375,7 @@ scale = Vector2( 0.166546, 0.166546 )
 texture = ExtResource( 19 )
 
 [node name="Stars" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="level1star" type="AnimatedSprite" parent="Stars"]
 position = Vector2( 125.753, 542.125 )
@@ -537,5 +538,5 @@ position = Vector2( 552.116, 311.961 )
 z_index = 1
 frames = ExtResource( 24 )
 animation = "loading"
-frame = 7
+frame = 16
 playing = true

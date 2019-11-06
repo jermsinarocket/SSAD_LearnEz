@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://entities/PerformanceReport/PerformanceReportController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://fonts/THSarabunNew.tres" type="DynamicFont" id=5]
 [ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=6]
 [ext_resource path="res://images/generateReport.png" type="Texture" id=7]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=8]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=9]
 
 [node name="PerformanceReportController" type="Node2D"]
 script = ExtResource( 1 )
@@ -80,3 +82,19 @@ margin_bottom = 209.864
 position = Vector2( 678.826, 492.023 )
 scale = Vector2( 0.388033, 0.421841 )
 normal = ExtResource( 7 )
+
+[node name="loading" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="loadingbg" type="Sprite" parent="loading"]
+position = Vector2( 510.619, 330.049 )
+scale = Vector2( 2.191, 1 )
+texture = ExtResource( 8 )
+
+[node name="loadingani" type="AnimatedSprite" parent="loading"]
+position = Vector2( 511.949, 326.483 )
+frames = ExtResource( 9 )
+animation = "loading"
+frame = 9
+playing = true
