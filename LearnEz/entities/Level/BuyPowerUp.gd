@@ -32,7 +32,6 @@ func loadPowerupInformation():
 
 func checkUserCurrency():
 	
-	
 	var userCurrency = userModel.getUserCurrency()
 	var powerUpCost = int(powerupModel.getSelectedPowerupCost())
 	var finalAmount

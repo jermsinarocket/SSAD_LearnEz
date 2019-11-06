@@ -268,6 +268,7 @@ scale = Vector2( 1.61911, 1.83147 )
 texture = ExtResource( 14 )
 
 [node name="SelectLvlBtn" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1Btn" type="TouchScreenButton" parent="SelectLvlBtn"]
 position = Vector2( 60.143, 410.977 )
@@ -295,6 +296,7 @@ scale = Vector2( 0.291486, 0.291486 )
 normal = ExtResource( 18 )
 
 [node name="LevelNames" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Level1Lbl" type="RichTextLabel" parent="LevelNames"]
 margin_left = 66.0
@@ -538,5 +540,5 @@ position = Vector2( 552.116, 311.961 )
 z_index = 1
 frames = ExtResource( 24 )
 animation = "loading"
-frame = 16
+frame = 12
 playing = true

@@ -1,9 +1,9 @@
 extends Node
 
 var baseUrl = "question/"
-var questions
-var diffuculty = 5
-var difficulty1 = []
+var currDifficulty = 5
+var allQuestions = [[],[],[],[],[],[],[],[],[],[]]
+
 
 func setQuestions(questions):
 	self.questions = questions
@@ -13,3 +13,20 @@ func getBaseURL():
 
 func getQuestions():
 	return self.questions
+	
+func setAllQuestionsByDifficulty(idx,question):
+	allQuestions[idx].insert(allQuestions[idx].size(),question)
+	
+func getQuestionsByDifficulty():
+	return (allQuestions[currDifficulty-1])
+
+func increaseDifficulty():
+	if(currDifficulty != 10):
+		currDifficulty += 1
+
+func decreaseDifficulty():
+	if(currDifficulty != 1):
+		currDifficulty -= 1
+	
+func resetDifficulty():
+	currDifficulty = 5

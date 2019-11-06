@@ -1,9 +1,6 @@
 extends AudioStreamPlayer
 
-var songPos 
-
-func _ready():
-	pass 
+var songPos = 0
 
 func playSong():
 	self.play()
