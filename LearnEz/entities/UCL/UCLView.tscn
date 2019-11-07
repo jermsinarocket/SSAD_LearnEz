@@ -39,6 +39,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "USER CREATED LEVEL"
 
 [node name="UCLs" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="ucl1" type="TouchScreenButton" parent="UCLs"]
 position = Vector2( 102.028, 135.465 )
@@ -119,7 +120,7 @@ position = Vector2( 563.348, 334.743 )
 z_index = 1
 frames = ExtResource( 10 )
 animation = "loading"
-frame = 14
+frame = 20
 playing = true
 
 [node name="loadingBackground" type="Sprite" parent="loading"]

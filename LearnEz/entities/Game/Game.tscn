@@ -452,19 +452,16 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 5
 playing = true
 offset = Vector2( 50, 50 )
 
 [node name="Ready" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 513.237, 301.385 )
 scale = Vector2( 1.28214, 0.999701 )
 frames = SubResource( 2 )
 animation = "ready"
 
 [node name="Questions" type="Popup" parent="."]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 popup_exclusive = true
@@ -476,7 +473,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 6
+frame = 3
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -484,7 +481,6 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 5
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]

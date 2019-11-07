@@ -28,4 +28,5 @@ func _physics_process(delta):
 	position.normalized()
 	position.y = clamp(position.y,0,534)
 	position.x = clamp(position.x,0,990)
+
 	

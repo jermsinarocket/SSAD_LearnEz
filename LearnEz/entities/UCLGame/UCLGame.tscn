@@ -450,6 +450,7 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
+frame = 5
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -479,6 +480,7 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
+frame = 5
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]

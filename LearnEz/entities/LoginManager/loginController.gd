@@ -19,6 +19,3 @@ func forget_password_clicked(meta):
 func _notification(what):
 	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
 		root.return_to_last()
-func _process(delta):
-	if Input.is_action_pressed('ui_cancel'):
-		root.return_to_last()

@@ -33,7 +33,6 @@ func _physics_process(delta):
 	var tile = Map.world_to_map(pos)
 	for k in enemyloc:
 		if (tile == k):
-			"""insert trigger here"""
 			questionPopup.popup()
 			get_parent().get_node("TimerPopup").popup()
 			enemyloc.remove(enemyloc.bsearch(k))
