@@ -119,7 +119,7 @@ position = Vector2( 563.348, 334.743 )
 z_index = 1
 frames = ExtResource( 10 )
 animation = "loading"
-frame = 20
+frame = 14
 playing = true
 
 [node name="loadingBackground" type="Sprite" parent="loading"]

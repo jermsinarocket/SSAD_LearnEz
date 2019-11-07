@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=2]
+[gd_scene load_steps=31 format=2]
 
 [ext_resource path="res://entities/UCL/CreateNewLevel/CreateUCLController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -29,6 +29,7 @@
 [ext_resource path="res://entities/UCL/CreateNewLevel/createSuccess.gd" type="Script" id=27]
 [ext_resource path="res://images/button_done.png" type="Texture" id=28]
 [ext_resource path="res://entities/UCL/CreateNewLevel/createFail.gd" type="Script" id=29]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=30]
 
 [node name="CreateNewLevelView" type="Node2D"]
 script = ExtResource( 1 )
@@ -147,6 +148,7 @@ scale = Vector2( 1.53685, 1 )
 normal = ExtResource( 12 )
 
 [node name="errorPopup" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 557.293, 309.314 )
 scale = Vector2( 1.05256, 0.795928 )
 z_index = 1
@@ -170,6 +172,7 @@ text = "Missing Fields and/or Answer(s)
 "
 
 [node name="questionContainer" type="Container" parent="."]
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 
@@ -624,6 +627,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "Enter Question 5:"
 
 [node name="createSuccess" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 545.5, 285 )
 scale = Vector2( 1.20508, 1.05859 )
 z_index = 1
@@ -645,6 +649,7 @@ scale = Vector2( 1.61874, 1.49554 )
 normal = ExtResource( 28 )
 
 [node name="createFail" type="Sprite" parent="."]
+editor/display_folded = true
 visible = false
 position = Vector2( 540, 277 )
 scale = Vector2( 0.835938, 0.78125 )
@@ -665,3 +670,19 @@ text = "User Created Level Failed. Please contact the Administrator if this issu
 position = Vector2( 218.916, -117.76 )
 scale = Vector2( 0.495327, 0.53 )
 normal = ExtResource( 15 )
+
+[node name="loading" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="bg" type="Sprite" parent="loading"]
+position = Vector2( 510.619, 330.049 )
+scale = Vector2( 2.191, 1 )
+texture = ExtResource( 13 )
+
+[node name="loading" type="AnimatedSprite" parent="loading"]
+position = Vector2( 511.949, 326.483 )
+frames = ExtResource( 30 )
+animation = "loading"
+frame = 2
+playing = true

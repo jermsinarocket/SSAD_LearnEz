@@ -3,6 +3,7 @@ extends Node2D
 var url = "ucl"
 var result_UCL
 var responseCode_UCL
+var success = 0
 
 func _ready():
 	$nextStep.connect("pressed", self, "nextStep_pressed")
@@ -83,7 +84,7 @@ func create_pressed():
 		var uclId = int(result_UCL[totalSize-1]["uclID"]) + 1
 		var user_id = userModel.getUserId()
 		var apiUrl = "ucl/" + String(user_id)
-		
+		$loading.show()
 		for question in $questionContainer.get_children():
 			var data = {
 				"uclID": uclId,
@@ -103,11 +104,13 @@ func create_pressed():
 			var responseCode = apiController.getResponseCode()
 			#for testing purposes.
 			print("Response Code: " + String(responseCode))
-			if (responseCode == 200):
-				$createSuccess.show()
-			else:
-				get_node("createFail").show()
-				print(data)	
+			success+=1
+		if (success == 5):
+			$loading.hide()
+			$createSuccess.show()
+		else:
+			get_node("createFail").show()
+
 
 func Q1_pressed():
 	get_node("questionContainer/question1").show()
