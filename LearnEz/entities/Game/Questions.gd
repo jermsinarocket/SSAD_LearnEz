@@ -5,6 +5,7 @@ var randomQuestionIdx
 var currQuestion
 var correctOption
 var questions
+var buttonsToHide = []
  
 func _ready():
 	connect("about_to_show",self,"loadCurrentQuestion")
@@ -17,13 +18,18 @@ func _ready():
 		
 	$ffPowerUpLbl.clear()
 	$ffPowerUpLbl.append_bbcode(userInventoryModel.getQuantityByIdx(0))
-	#$timePowerup.connect("pressed",self,"timeUp")
+	$ffPowerUp.connect("pressed",self,"useFiftyfifty")
 	pass 
 
 func loadCurrentQuestion():
 	print(gameModel.currDifficulty)
+	buttonsToHide = []
 	for item in self.get_children():
 		item.show()
+	
+	for item in $questionOptionsLbl.get_children():
+		item.show()
+		
 	$correctWrongAni.hide()
 	
 	get_parent().get_node("TimerPopup").popup()
@@ -130,3 +136,25 @@ func resetAll():
 func _on_correctWrongAni_animation_finished():
 	resetAll()
 	pass 
+	
+func useFiftyfifty():
+	if(userInventoryModel.getQuantityByIdx(0) == '0'):
+		pass
+	else:
+		var numButtons = $questionOptions.get_child_count()
+		
+		for i in range(numButtons):
+			if(i != correctOption):
+				buttonsToHide.insert(buttonsToHide.size(),i)
+		var itemToRemove = int(rand_range(0,buttonsToHide.size()))
+		buttonsToHide.remove(itemToRemove)
+		
+		if(buttonsToHide.size() == 2):
+			for i in range(buttonsToHide.size()):
+				$questionOptions.get_child(buttonsToHide[i]).hide()
+				$questionOptionsLbl.get_child(buttonsToHide[i]).hide()
+				
+			userInventoryModel.reducePowerupQuantyByIdx(0)
+			$ffPowerUpLbl.clear()
+			$ffPowerUpLbl.append_bbcode(userInventoryModel.getQuantityByIdx(0))
+	pass

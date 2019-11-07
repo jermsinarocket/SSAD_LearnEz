@@ -538,5 +538,4 @@ position = Vector2( 552.116, 311.961 )
 z_index = 1
 frames = ExtResource( 24 )
 animation = "loading"
-frame = 1
 playing = true

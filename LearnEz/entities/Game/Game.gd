@@ -26,10 +26,6 @@ func loadQuestions():
 		var idx = difficulty - 1
 		gameModel.setAllQuestionsByDifficulty(idx,question)
 
-	#gameModel.getQuestionsByDifficulty().remove(0)
-	#print(gameModel.getQuestionsByDifficulty().size())
-	#print(userInventoryModel.getQuantityByIdx(0))
-
 func _on_Ready_animation_finished():
 	$Ready.queue_free()
 	$TimerPopup.popup()
@@ -38,7 +34,7 @@ func _on_Ready_animation_finished():
 	pass 
 
 func _on_Timer_no_time():
-	
+	updateUserInventory()
 	$Questions.hide()
 	gameTimer.set_process(false)
 	$TimerPopup/Timer/ms.stop()
@@ -63,5 +59,15 @@ func timeUp():
 	
 func _on_Questions_popup_hide():
 	if(gameModel.numQuestions == 0):
+		$TimerPopup/Timer/ms.stop()
 		Player.set_physics_process(false)
+		gameModel.calculateScore(gameTimer.m,gameTimer.s,gameTimer.ms)
+		updateUserInventory()
+		$gameClearPopup.popup()
 	pass
+	
+func updateUserInventory():
+	var apiUrl = userInventoryModel.getBaseUrl() + "/gameInventory/" + userModel.getUserId()
+	var data = {"power1Quantity": int(userInventoryModel.getQuantityByIdx(0)),"power2Quantity": int(userInventoryModel.getQuantityByIdx(1))}
+	apiController.apiCallPut(data,apiUrl)
+

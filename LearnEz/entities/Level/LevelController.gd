@@ -32,7 +32,7 @@ func _ready():
 
 func _notification(what):
     if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
+        root.switch_scene("res://entities/World/WoirldController.tscn")
 
 func loadLevelInformation():
 	var apiURL = levelModel.getBaseUrl() + '/' + worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)
