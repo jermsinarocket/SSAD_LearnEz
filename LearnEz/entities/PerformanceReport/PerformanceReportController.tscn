@@ -20,7 +20,7 @@ scale = Vector2( 0.853, 0.501 )
 texture = ExtResource( 2 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 175.75, 79.8 )
+position = Vector2( 179.55, 78.85 )
 texture = ExtResource( 3 )
 
 [node name="Graph" type="ReferenceRect" parent="."]
@@ -97,7 +97,7 @@ texture = ExtResource( 8 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 9 )
 animation = "loading"
-frame = 17
+frame = 29
 playing = true
 
 [node name="refresh_btn" type="TouchScreenButton" parent="."]

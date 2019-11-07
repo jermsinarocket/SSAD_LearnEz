@@ -450,7 +450,6 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 3
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -461,7 +460,6 @@ frames = SubResource( 2 )
 animation = "ready"
 
 [node name="Questions" type="Popup" parent="."]
-editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 popup_exclusive = true
@@ -473,7 +471,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 1
+frame = 5
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -481,7 +479,6 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 3
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]
@@ -509,10 +506,10 @@ scale = Vector2( 3.87149, 1.96439 )
 texture = ExtResource( 254 )
 
 [node name="questionTitleLbl" type="RichTextLabel" parent="Questions"]
-margin_left = 184.0
-margin_top = 340.0
-margin_right = 634.0
-margin_bottom = 399.0
+margin_left = 170.0
+margin_top = 333.0
+margin_right = 637.0
+margin_bottom = 411.0
 rect_scale = Vector2( 1.54214, 1.04252 )
 custom_fonts/normal_font = ExtResource( 255 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -542,11 +539,10 @@ scale = Vector2( 1.88027, 1.52367 )
 normal = ExtResource( 256 )
 
 [node name="questionOptionsLbl" type="Control" parent="Questions"]
-editor/display_folded = true
 
 [node name="option1Lbl" type="RichTextLabel" parent="Questions/questionOptionsLbl"]
 margin_left = 167.0
-margin_top = 439.0
+margin_top = 436.0
 margin_right = 530.0
 margin_bottom = 507.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -555,7 +551,7 @@ scroll_active = false
 
 [node name="option2Lbl" type="RichTextLabel" parent="Questions/questionOptionsLbl"]
 margin_left = 553.0
-margin_top = 438.0
+margin_top = 436.0
 margin_right = 897.0
 margin_bottom = 509.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -573,7 +569,7 @@ scroll_active = false
 
 [node name="option4Lbl" type="RichTextLabel" parent="Questions/questionOptionsLbl"]
 margin_left = 551.0
-margin_top = 524.0
+margin_top = 521.0
 margin_right = 899.0
 margin_bottom = 594.0
 custom_colors/default_color = Color( 0, 0, 0, 1 )
@@ -708,9 +704,9 @@ frames = ExtResource( 327 )
 animation = "1star"
 
 [node name="scoreLbl" type="RichTextLabel" parent="gameClearPopup/gameClearControl"]
-margin_left = 388.154
+margin_left = 395.52
 margin_top = 215.723
-margin_right = 549.154
+margin_right = 556.52
 margin_bottom = 271.723
 rect_scale = Vector2( 2, 2 )
 custom_fonts/normal_font = ExtResource( 255 )

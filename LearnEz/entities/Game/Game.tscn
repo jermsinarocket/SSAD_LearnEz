@@ -438,7 +438,6 @@ format = 1
 tile_data = PoolIntArray( -196618, 1, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 collision/safe_margin = 0.02
 script = ExtResource( 4 )
 SPEED = 200
@@ -453,7 +452,7 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 5
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -465,7 +464,7 @@ frames = SubResource( 2 )
 animation = "ready"
 
 [node name="Questions" type="Popup" parent="."]
-editor/display_folded = true
+visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 popup_exclusive = true
@@ -477,7 +476,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 4
+frame = 6
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -485,7 +484,7 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 5
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]
@@ -523,6 +522,16 @@ rect_scale = Vector2( 1.54214, 1.04252 )
 custom_fonts/normal_font = ExtResource( 255 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 tab_size = 5
+scroll_active = false
+
+[node name="currentDiffLbl" type="RichTextLabel" parent="Questions"]
+margin_left = 18.0
+margin_top = 16.0
+margin_right = 171.0
+margin_bottom = 48.0
+rect_scale = Vector2( 2, 2 )
+custom_fonts/normal_font = ExtResource( 255 )
+text = "Current Difficulty:"
 scroll_active = false
 
 [node name="questionOptions" type="Control" parent="Questions"]
@@ -701,7 +710,6 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
 [node name="gameClearPopup" type="Popup" parent="."]
-visible = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 326 )

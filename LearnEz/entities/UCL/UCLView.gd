@@ -185,8 +185,6 @@ func get_questions():
 	pass
 		
 func load_questions():
-	#for k in range(10):
-	#	gameModel.setAllQuestionsByDifficulty(k,input_array)
 	for item in input_array:
 		gameModel.setAllQuestionsByDifficulty(4,item)
 	pass

@@ -39,8 +39,6 @@ func backToWorld():
 	
 func updateUserGameClear():
 	var apiUrl = "UserUnlockWorld/game/updateUser/" + userModel.getUserId()
-	print(levelModel.getLevelIDByIdx(levelModel.getSelectedLevelIdx()))
-	print(worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx))
 	var data = {
               "score" : gameModel.getScore(),
               "levelID": levelModel.getLevelIDByIdx(levelModel.getSelectedLevelIdx()),
@@ -49,5 +47,4 @@ func updateUserGameClear():
 	
 	apiController.apiCallPut(data,apiUrl)
 	yield(apiController,"request_completed")
-	print(apiController.getResult())
 	pass

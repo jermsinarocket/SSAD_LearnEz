@@ -10,12 +10,12 @@
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 511.866, 301.479 )
+position = Vector2( 510.394, 298.801 )
 scale = Vector2( 0.853, 0.501 )
 texture = ExtResource( 2 )
 
 [node name="logo" type="Sprite" parent="."]
-position = Vector2( 175.75, 79.8001 )
+position = Vector2( 179.55, 78.85 )
 texture = ExtResource( 3 )
 
 [node name="Settings" type="TouchScreenButton" parent="."]

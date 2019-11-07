@@ -22,7 +22,9 @@ func _ready():
 	pass 
 
 func loadCurrentQuestion():
-	print("Current Difficulty" + str(gameModel.currDifficulty))
+	#print("Current Difficulty" + str(gameModel.currDifficulty))
+	$currentDiffLbl.clear()
+	$currentDiffLbl.append_bbcode("Current Difficulty: " + str(gameModel.currDifficulty))
 	buttonsToHide = []
 	for item in self.get_children():
 		item.show()
