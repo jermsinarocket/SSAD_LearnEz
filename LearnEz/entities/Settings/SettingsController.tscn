@@ -48,7 +48,7 @@ position = Vector2( 266.387, 220.357 )
 scale = Vector2( 2.71186, 2.5487 )
 frames = ExtResource( 4 )
 animation = "avatar3"
-frame = 3
+frame = 5
 playing = true
 
 [node name="ChangeAvatar_btn" type="TouchScreenButton" parent="."]

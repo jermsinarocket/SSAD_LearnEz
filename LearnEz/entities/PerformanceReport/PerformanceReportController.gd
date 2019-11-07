@@ -29,8 +29,10 @@ func _ready():
 	pass
 	
 func _notification(what):
-    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
+	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
+		root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
+	if Input.is_action_pressed('ui_cancel'):
+		root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
 
 func loadClassOptions():
 	for group in userModel.getUserGroup():

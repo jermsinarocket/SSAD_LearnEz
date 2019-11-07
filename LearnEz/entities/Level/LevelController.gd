@@ -31,8 +31,12 @@ func _ready():
 	pass 
 
 func _notification(what):
-    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.switch_scene("res://entities/World/WoirldController.tscn")
+	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
+		root.switch_scene("res://entities/World/WoirldController.tscn")
+
+func _process(delta):
+	if Input.is_action_pressed('ui_cancel'):
+		root.switch_scene("res://entities/World/WoirldController.tscn")
 
 func loadLevelInformation():
 	var apiURL = levelModel.getBaseUrl() + '/' + worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)

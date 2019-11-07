@@ -21,11 +21,7 @@ func _ready():
 	$refresh_btn.connect('pressed',self,"loadGraph")
 	$WorldLbl.hide()
 	pass
-	
-func _notification(what):
-    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
-		
+
 func loadStudentOptions():
 	for student in performanceModel.getStudentsList():
 		$StudentOpt.add_item(student['name']+ ' ' + student['userID'])
@@ -86,3 +82,9 @@ func generateStudentReport():
 	var url = apiController.baseUrl + "group/students/indv/score/generatereport/" + performanceModel.getStudentMatricByIdx(performanceModel.getSelectedStudentIdx())
 	OS.shell_open(url)
 	pass
+
+func _notification(what):
+	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
+		root.return_to_last()
+	if Input.is_action_pressed('ui_cancel'):
+		root.switch_scene("res://entities/PerformanceReport/PerformanceReportController.tscn")
