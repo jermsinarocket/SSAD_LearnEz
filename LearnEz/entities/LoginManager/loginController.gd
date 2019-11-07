@@ -19,3 +19,4 @@ func forget_password_clicked(meta):
 func _notification(what):
     if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
         root.return_to_last()
+	

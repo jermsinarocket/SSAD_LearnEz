@@ -71,7 +71,7 @@ func setUnlocked():
 				($Stars.get_child(idx)).show()
 				if(worldScore > 5 && worldScore < 1495):
 					($Stars.get_child(idx)).play("1star")
-				elif(worldScore > 1505 && worldScore < 2995):
+				elif(worldScore >= 1495 && worldScore < 2995):
 					($Stars.get_child(idx)).play("2star")
 				else:
 					($Stars.get_child(idx)).play("3star")

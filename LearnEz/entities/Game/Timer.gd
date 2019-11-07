@@ -1,8 +1,8 @@
 extends RichTextLabel
 
 var ms = 0
-var s = 10
-var m = 0
+var s = 30
+var m = 1
 var running = true
 signal no_time
 	

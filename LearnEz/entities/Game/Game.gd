@@ -2,8 +2,12 @@ extends Node2D
 
 onready var gameTimer = $TimerPopup/Timer
 onready var Player = $Player
+onready var numEnemies = $Map.enemyloc.size()
 
 func _ready():
+	SoundManager.stop_bgm("themeSong")
+	SoundManager.play_me("res://assets/sounds/gameTheme.ogg",true)
+	
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
 	$TimerPopup/bg.modulate = Color(1,1,1,0.5)
@@ -11,6 +15,8 @@ func _ready():
 	$timePowerupQuantityLbl.clear()
 	$timePowerupQuantityLbl.append_bbcode(userInventoryModel.getQuantityByIdx(1))
 	$timePowerup.connect("pressed",self,"timeUp")
+	gameModel.setNumQuestions(numEnemies)
+	
 	pass
 
 func loadQuestions():

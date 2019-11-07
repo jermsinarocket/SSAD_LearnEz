@@ -4,7 +4,7 @@ var current_scene_path = null
 var root_scene = "res://entities/Main/Launch.tscn"
 var history = []
 var discussion_selected
-
+	
 func switch_scene(path):
 	#If not on the root scene, store the current scene as the last scene
 	if current_scene_path:

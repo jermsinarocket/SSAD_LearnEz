@@ -291,5 +291,5 @@ texture = ExtResource( 10 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 11 )
 animation = "loading"
-frame = 13
+frame = 22
 playing = true

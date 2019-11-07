@@ -93,7 +93,7 @@ func setLockStatus():
 				pass
 			elif(lvlScore > 0 && lvlScore < 300):
 				($Stars.get_child(idx)).play("1star")
-			elif(lvlScore > 300 && lvlScore < 600):
+			elif(lvlScore >= 300 && lvlScore < 600):
 				($Stars.get_child(idx)).show()
 				($Stars.get_child(idx)).play("2star")
 			else:
