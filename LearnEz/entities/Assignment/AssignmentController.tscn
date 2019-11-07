@@ -18,8 +18,8 @@ position = Vector2( 0, -5 )
 script = ExtResource( 1 )
 
 [node name="Background" type="Sprite" parent="."]
-position = Vector2( 543, 278 )
-scale = Vector2( 0.853, 0.501 )
+position = Vector2( 541.218, 277.381 )
+scale = Vector2( 0.856152, 0.501943 )
 texture = ExtResource( 2 )
 offset = Vector2( -34.761, 55.956 )
 
@@ -100,7 +100,7 @@ texture = ExtResource( 6 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 9 )
 animation = "loading"
-frame = 21
+frame = 22
 playing = true
 
 [node name="GoLeft_Btn" type="TouchScreenButton" parent="."]
@@ -304,7 +304,6 @@ bbcode_text = "[url]View More[/url]"
 text = "View More"
 
 [node name="assignment_3" type="Sprite" parent="."]
-editor/display_folded = true
 position = Vector2( 798.43, 395.117 )
 scale = Vector2( 0.2, 0.4 )
 texture = ExtResource( 12 )
@@ -317,6 +316,7 @@ margin_bottom = -310.0
 rect_scale = Vector2( 1.1, 1 )
 custom_fonts/normal_font = ExtResource( 4 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 bbcode_enabled = true

@@ -23,8 +23,12 @@ func _ready():
 
 func _notification(what):
     if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
+        root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
 
+func _input(delta):
+	if Input.is_action_pressed('ui_cancel'):
+		root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
+		
 func loadWorlds():
 		var apiUrl = url + '/all' 
 		apiController.apiCallGet(apiUrl)

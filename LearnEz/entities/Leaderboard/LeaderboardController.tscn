@@ -29,7 +29,7 @@ scale = Vector2( 0.855, 0.502 )
 texture = ExtResource( 2 )
 
 [node name="logo" type="Sprite" parent="."]
-position = Vector2( 161.545, 76.2491 )
+position = Vector2( 184.549, 71.769 )
 texture = ExtResource( 3 )
 
 [node name="Title" type="RichTextLabel" parent="."]

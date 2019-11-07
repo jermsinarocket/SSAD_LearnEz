@@ -240,3 +240,7 @@ func new_comment_pressed():
 func _notification(what):
     if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
         root.switch_scene("res://entities/Discussion/DiscussionBoardController.tscn")
+
+func _input(delta):
+	if Input.is_action_pressed('ui_cancel'):
+		root.switch_scene("res://entities/Discussion/DiscussionBoardController.tscn")

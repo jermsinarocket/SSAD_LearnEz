@@ -1,9 +1,9 @@
-[gd_scene load_steps=338 format=2]
+[gd_scene load_steps=336 format=2]
 
-[ext_resource path="res://entities/Game/Game.gd" type="Script" id=1]
-[ext_resource path="res://entities/Game/Map.gd" type="Script" id=2]
+[ext_resource path="res://entities/UCLGame/UCLG.gd" type="Script" id=1]
+[ext_resource path="res://entities/UCLGame/Map.gd" type="Script" id=2]
 [ext_resource path="res://road_tiles.tres" type="TileSet" id=3]
-[ext_resource path="res://entities/Game/Player.gd" type="Script" id=4]
+[ext_resource path="res://entities/UCLGame/Player.gd" type="Script" id=4]
 [ext_resource path="res://images/frames/avatars/avatars.tres" type="SpriteFrames" id=5]
 [ext_resource path="res://images/frames/ready/frame_000_delay-0.03s.png" type="Texture" id=6]
 [ext_resource path="res://images/frames/ready/frame_001_delay-0.03s.png" type="Texture" id=7]
@@ -141,7 +141,7 @@
 [ext_resource path="res://images/frames/ready/frame_133_delay-0.03s.png" type="Texture" id=139]
 [ext_resource path="res://images/frames/ready/frame_134_delay-0.03s.png" type="Texture" id=140]
 [ext_resource path="res://images/frames/ready/frame_135_delay-0.03s.png" type="Texture" id=141]
-[ext_resource path="res://entities/Game/Questions.gd" type="Script" id=142]
+[ext_resource path="res://entities/UCLGame/Questions.gd" type="Script" id=142]
 [ext_resource path="res://images/frames/question_bg/frame_0_delay-0.1s.png" type="Texture" id=143]
 [ext_resource path="res://images/frames/question_bg/frame_1_delay-0.1s.png" type="Texture" id=144]
 [ext_resource path="res://images/frames/question_bg/frame_2_delay-0.1s.png" type="Texture" id=145]
@@ -276,59 +276,57 @@
 [ext_resource path="res://images/frames/correctWrong/correct/frame_5_delay-0.1s.png" type="Texture" id=274]
 [ext_resource path="res://images/frames/correctWrong/correct/frame_6_delay-0.1s.png" type="Texture" id=275]
 [ext_resource path="res://images/frames/correctWrong/correct/frame_7_delay-0.1s.png" type="Texture" id=276]
-[ext_resource path="res://images/50-50.png" type="Texture" id=277]
-[ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=278]
-[ext_resource path="res://images/timer_bg.png" type="Texture" id=279]
-[ext_resource path="res://entities/Game/Timer.gd" type="Script" id=280]
-[ext_resource path="res://entities/Game/TimeUpPopup.gd" type="Script" id=281]
-[ext_resource path="res://images/frames/gameover/frame_042_delay-0.03s.png" type="Texture" id=282]
-[ext_resource path="res://images/frames/gameover/frame_000_delay-0.03s.png" type="Texture" id=283]
-[ext_resource path="res://images/frames/gameover/frame_001_delay-0.03s.png" type="Texture" id=284]
-[ext_resource path="res://images/frames/gameover/frame_002_delay-0.03s.png" type="Texture" id=285]
-[ext_resource path="res://images/frames/gameover/frame_003_delay-0.03s.png" type="Texture" id=286]
-[ext_resource path="res://images/frames/gameover/frame_004_delay-0.03s.png" type="Texture" id=287]
-[ext_resource path="res://images/frames/gameover/frame_005_delay-0.03s.png" type="Texture" id=288]
-[ext_resource path="res://images/frames/gameover/frame_006_delay-0.03s.png" type="Texture" id=289]
-[ext_resource path="res://images/frames/gameover/frame_007_delay-0.03s.png" type="Texture" id=290]
-[ext_resource path="res://images/frames/gameover/frame_008_delay-0.03s.png" type="Texture" id=291]
-[ext_resource path="res://images/frames/gameover/frame_009_delay-0.03s.png" type="Texture" id=292]
-[ext_resource path="res://images/frames/gameover/frame_010_delay-0.03s.png" type="Texture" id=293]
-[ext_resource path="res://images/frames/gameover/frame_011_delay-0.03s.png" type="Texture" id=294]
-[ext_resource path="res://images/frames/gameover/frame_012_delay-0.03s.png" type="Texture" id=295]
-[ext_resource path="res://images/frames/gameover/frame_013_delay-0.03s.png" type="Texture" id=296]
-[ext_resource path="res://images/frames/gameover/frame_014_delay-0.03s.png" type="Texture" id=297]
-[ext_resource path="res://images/frames/gameover/frame_015_delay-0.03s.png" type="Texture" id=298]
-[ext_resource path="res://images/frames/gameover/frame_016_delay-0.03s.png" type="Texture" id=299]
-[ext_resource path="res://images/frames/gameover/frame_017_delay-0.03s.png" type="Texture" id=300]
-[ext_resource path="res://images/frames/gameover/frame_018_delay-0.03s.png" type="Texture" id=301]
-[ext_resource path="res://images/frames/gameover/frame_019_delay-0.03s.png" type="Texture" id=302]
-[ext_resource path="res://images/frames/gameover/frame_020_delay-0.03s.png" type="Texture" id=303]
-[ext_resource path="res://images/frames/gameover/frame_021_delay-0.03s.png" type="Texture" id=304]
-[ext_resource path="res://images/frames/gameover/frame_022_delay-0.03s.png" type="Texture" id=305]
-[ext_resource path="res://images/frames/gameover/frame_023_delay-0.03s.png" type="Texture" id=306]
-[ext_resource path="res://images/frames/gameover/frame_024_delay-0.03s.png" type="Texture" id=307]
-[ext_resource path="res://images/frames/gameover/frame_025_delay-0.03s.png" type="Texture" id=308]
-[ext_resource path="res://images/frames/gameover/frame_026_delay-0.03s.png" type="Texture" id=309]
-[ext_resource path="res://images/frames/gameover/frame_027_delay-0.03s.png" type="Texture" id=310]
-[ext_resource path="res://images/frames/gameover/frame_028_delay-0.03s.png" type="Texture" id=311]
-[ext_resource path="res://images/frames/gameover/frame_029_delay-0.03s.png" type="Texture" id=312]
-[ext_resource path="res://images/frames/gameover/frame_030_delay-0.03s.png" type="Texture" id=313]
-[ext_resource path="res://images/frames/gameover/frame_031_delay-0.03s.png" type="Texture" id=314]
-[ext_resource path="res://images/frames/gameover/frame_032_delay-0.03s.png" type="Texture" id=315]
-[ext_resource path="res://images/frames/gameover/frame_033_delay-0.03s.png" type="Texture" id=316]
-[ext_resource path="res://images/frames/gameover/frame_034_delay-0.03s.png" type="Texture" id=317]
-[ext_resource path="res://images/frames/gameover/frame_035_delay-0.03s.png" type="Texture" id=318]
-[ext_resource path="res://images/frames/gameover/frame_036_delay-0.03s.png" type="Texture" id=319]
-[ext_resource path="res://images/frames/gameover/frame_037_delay-0.03s.png" type="Texture" id=320]
-[ext_resource path="res://images/frames/gameover/frame_038_delay-0.03s.png" type="Texture" id=321]
-[ext_resource path="res://images/frames/gameover/frame_039_delay-0.03s.png" type="Texture" id=322]
-[ext_resource path="res://images/frames/gameover/frame_040_delay-0.03s.png" type="Texture" id=323]
-[ext_resource path="res://images/frames/gameover/frame_041_delay-0.03s.png" type="Texture" id=324]
-[ext_resource path="res://images/addtime.png" type="Texture" id=325]
-[ext_resource path="res://entities/Game/gameClearPopup.gd" type="Script" id=326]
-[ext_resource path="res://images/frames/level_complete/gameClear.tres" type="SpriteFrames" id=327]
-[ext_resource path="res://images/stage_clear_bg.png" type="Texture" id=328]
-[ext_resource path="res://images/frames/stars/stars.tres" type="SpriteFrames" id=329]
+[ext_resource path="res://fonts/OpenSans_Normal.tres" type="DynamicFont" id=277]
+[ext_resource path="res://images/timer_bg.png" type="Texture" id=278]
+[ext_resource path="res://entities/UCLGame/Timer.gd" type="Script" id=279]
+[ext_resource path="res://entities/UCLGame/TimeUpPopup.gd" type="Script" id=280]
+[ext_resource path="res://images/frames/gameover/frame_042_delay-0.03s.png" type="Texture" id=281]
+[ext_resource path="res://images/frames/gameover/frame_000_delay-0.03s.png" type="Texture" id=282]
+[ext_resource path="res://images/frames/gameover/frame_001_delay-0.03s.png" type="Texture" id=283]
+[ext_resource path="res://images/frames/gameover/frame_002_delay-0.03s.png" type="Texture" id=284]
+[ext_resource path="res://images/frames/gameover/frame_003_delay-0.03s.png" type="Texture" id=285]
+[ext_resource path="res://images/frames/gameover/frame_004_delay-0.03s.png" type="Texture" id=286]
+[ext_resource path="res://images/frames/gameover/frame_005_delay-0.03s.png" type="Texture" id=287]
+[ext_resource path="res://images/frames/gameover/frame_006_delay-0.03s.png" type="Texture" id=288]
+[ext_resource path="res://images/frames/gameover/frame_007_delay-0.03s.png" type="Texture" id=289]
+[ext_resource path="res://images/frames/gameover/frame_008_delay-0.03s.png" type="Texture" id=290]
+[ext_resource path="res://images/frames/gameover/frame_009_delay-0.03s.png" type="Texture" id=291]
+[ext_resource path="res://images/frames/gameover/frame_010_delay-0.03s.png" type="Texture" id=292]
+[ext_resource path="res://images/frames/gameover/frame_011_delay-0.03s.png" type="Texture" id=293]
+[ext_resource path="res://images/frames/gameover/frame_012_delay-0.03s.png" type="Texture" id=294]
+[ext_resource path="res://images/frames/gameover/frame_013_delay-0.03s.png" type="Texture" id=295]
+[ext_resource path="res://images/frames/gameover/frame_014_delay-0.03s.png" type="Texture" id=296]
+[ext_resource path="res://images/frames/gameover/frame_015_delay-0.03s.png" type="Texture" id=297]
+[ext_resource path="res://images/frames/gameover/frame_016_delay-0.03s.png" type="Texture" id=298]
+[ext_resource path="res://images/frames/gameover/frame_017_delay-0.03s.png" type="Texture" id=299]
+[ext_resource path="res://images/frames/gameover/frame_018_delay-0.03s.png" type="Texture" id=300]
+[ext_resource path="res://images/frames/gameover/frame_019_delay-0.03s.png" type="Texture" id=301]
+[ext_resource path="res://images/frames/gameover/frame_020_delay-0.03s.png" type="Texture" id=302]
+[ext_resource path="res://images/frames/gameover/frame_021_delay-0.03s.png" type="Texture" id=303]
+[ext_resource path="res://images/frames/gameover/frame_022_delay-0.03s.png" type="Texture" id=304]
+[ext_resource path="res://images/frames/gameover/frame_023_delay-0.03s.png" type="Texture" id=305]
+[ext_resource path="res://images/frames/gameover/frame_024_delay-0.03s.png" type="Texture" id=306]
+[ext_resource path="res://images/frames/gameover/frame_025_delay-0.03s.png" type="Texture" id=307]
+[ext_resource path="res://images/frames/gameover/frame_026_delay-0.03s.png" type="Texture" id=308]
+[ext_resource path="res://images/frames/gameover/frame_027_delay-0.03s.png" type="Texture" id=309]
+[ext_resource path="res://images/frames/gameover/frame_028_delay-0.03s.png" type="Texture" id=310]
+[ext_resource path="res://images/frames/gameover/frame_029_delay-0.03s.png" type="Texture" id=311]
+[ext_resource path="res://images/frames/gameover/frame_030_delay-0.03s.png" type="Texture" id=312]
+[ext_resource path="res://images/frames/gameover/frame_031_delay-0.03s.png" type="Texture" id=313]
+[ext_resource path="res://images/frames/gameover/frame_032_delay-0.03s.png" type="Texture" id=314]
+[ext_resource path="res://images/frames/gameover/frame_033_delay-0.03s.png" type="Texture" id=315]
+[ext_resource path="res://images/frames/gameover/frame_034_delay-0.03s.png" type="Texture" id=316]
+[ext_resource path="res://images/frames/gameover/frame_035_delay-0.03s.png" type="Texture" id=317]
+[ext_resource path="res://images/frames/gameover/frame_036_delay-0.03s.png" type="Texture" id=318]
+[ext_resource path="res://images/frames/gameover/frame_037_delay-0.03s.png" type="Texture" id=319]
+[ext_resource path="res://images/frames/gameover/frame_038_delay-0.03s.png" type="Texture" id=320]
+[ext_resource path="res://images/frames/gameover/frame_039_delay-0.03s.png" type="Texture" id=321]
+[ext_resource path="res://images/frames/gameover/frame_040_delay-0.03s.png" type="Texture" id=322]
+[ext_resource path="res://images/frames/gameover/frame_041_delay-0.03s.png" type="Texture" id=323]
+[ext_resource path="res://entities/UCLGame/uclGameClearPopup.gd" type="Script" id=324]
+[ext_resource path="res://images/frames/level_complete/gameClear.tres" type="SpriteFrames" id=325]
+[ext_resource path="res://images/stage_clear_bg.png" type="Texture" id=326]
+[ext_resource path="res://images/frames/stars/stars.tres" type="SpriteFrames" id=327]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 45.607
@@ -418,13 +416,13 @@ animations = [ {
 
 [sub_resource type="SpriteFrames" id=8]
 animations = [ {
-"frames": [ ExtResource( 283 ), ExtResource( 284 ), ExtResource( 285 ), ExtResource( 286 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 293 ), ExtResource( 294 ), ExtResource( 295 ), ExtResource( 296 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 305 ), ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 309 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 312 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 324 ), ExtResource( 282 ) ],
+"frames": [ ExtResource( 282 ), ExtResource( 283 ), ExtResource( 284 ), ExtResource( 285 ), ExtResource( 286 ), ExtResource( 287 ), ExtResource( 288 ), ExtResource( 289 ), ExtResource( 290 ), ExtResource( 291 ), ExtResource( 292 ), ExtResource( 293 ), ExtResource( 294 ), ExtResource( 295 ), ExtResource( 296 ), ExtResource( 297 ), ExtResource( 298 ), ExtResource( 299 ), ExtResource( 300 ), ExtResource( 301 ), ExtResource( 302 ), ExtResource( 303 ), ExtResource( 304 ), ExtResource( 305 ), ExtResource( 306 ), ExtResource( 307 ), ExtResource( 308 ), ExtResource( 309 ), ExtResource( 310 ), ExtResource( 311 ), ExtResource( 312 ), ExtResource( 313 ), ExtResource( 314 ), ExtResource( 315 ), ExtResource( 316 ), ExtResource( 317 ), ExtResource( 318 ), ExtResource( 319 ), ExtResource( 320 ), ExtResource( 321 ), ExtResource( 322 ), ExtResource( 323 ), ExtResource( 281 ) ],
 "loop": true,
 "name": "gameover",
 "speed": 10.0
 } ]
 
-[node name="Game" type="Node2D"]
+[node name="UCLGame" type="Node2D"]
 script = ExtResource( 1 )
 
 [node name="Map" type="Area2D" parent="."]
@@ -438,7 +436,6 @@ format = 1
 tile_data = PoolIntArray( -196618, 1, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 collision/safe_margin = 0.02
 script = ExtResource( 4 )
 SPEED = 200
@@ -453,12 +450,11 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 3
 playing = true
 offset = Vector2( 50, 50 )
 
 [node name="Ready" type="AnimatedSprite" parent="."]
-visible = false
 position = Vector2( 513.237, 301.385 )
 scale = Vector2( 1.28214, 0.999701 )
 frames = SubResource( 2 )
@@ -477,7 +473,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 4
+frame = 1
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -485,7 +481,7 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 3
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]
@@ -496,14 +492,12 @@ frames = SubResource( 4 )
 animation = "swing"
 
 [node name="enemy2" type="AnimatedSprite" parent="Questions/Enemies"]
-visible = false
 position = Vector2( 660.24, 218.464 )
 scale = Vector2( 0.678245, 0.678245 )
 frames = SubResource( 5 )
 animation = "swing"
 
 [node name="enemy3" type="AnimatedSprite" parent="Questions/Enemies"]
-visible = false
 position = Vector2( 662.289, 245.584 )
 scale = Vector2( 0.465992, 0.465992 )
 frames = SubResource( 6 )
@@ -526,7 +520,6 @@ tab_size = 5
 scroll_active = false
 
 [node name="questionOptions" type="Control" parent="Questions"]
-editor/display_folded = true
 
 [node name="option1" type="TouchScreenButton" parent="Questions/questionOptions"]
 position = Vector2( 162.924, 433.883 )
@@ -549,6 +542,7 @@ scale = Vector2( 1.88027, 1.52367 )
 normal = ExtResource( 256 )
 
 [node name="questionOptionsLbl" type="Control" parent="Questions"]
+editor/display_folded = true
 
 [node name="option1Lbl" type="RichTextLabel" parent="Questions/questionOptionsLbl"]
 margin_left = 167.0
@@ -592,24 +586,17 @@ scale = Vector2( 0.375326, 0.375326 )
 frames = SubResource( 7 )
 animation = "wrong"
 
-[node name="ffPowerUp" type="TouchScreenButton" parent="Questions"]
-position = Vector2( 823.786, 240.567 )
-scale = Vector2( 0.143695, 0.143695 )
-normal = ExtResource( 277 )
-
 [node name="ffPowerUpLbl" type="RichTextLabel" parent="Questions"]
-margin_left = 875.835
-margin_top = 218.756
-margin_right = 919.835
-margin_bottom = 295.756
+margin_left = 878.628
+margin_top = 219.454
+margin_right = 922.628
+margin_bottom = 296.454
 rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/normal_font = ExtResource( 278 )
-custom_colors/default_color = Color( 0.8, 0.121569, 0.121569, 1 )
+custom_fonts/normal_font = ExtResource( 277 )
+custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
 [node name="TimerPopup" type="Popup" parent="."]
-editor/display_folded = true
-visible = true
 margin_top = -5.72791
 margin_right = 40.0
 margin_bottom = 34.2721
@@ -619,7 +606,7 @@ popup_exclusive = true
 modulate = Color( 0.996078, 0.968627, 0.968627, 1 )
 position = Vector2( 508.108, 42.4176 )
 scale = Vector2( 1.83481, 1 )
-texture = ExtResource( 279 )
+texture = ExtResource( 278 )
 
 [node name="Timer" type="RichTextLabel" parent="TimerPopup"]
 margin_left = 448.059
@@ -627,11 +614,11 @@ margin_top = 8.183
 margin_right = 653.059
 margin_bottom = 69.183
 rect_scale = Vector2( 0.9, 0.9 )
-custom_fonts/normal_font = ExtResource( 278 )
+custom_fonts/normal_font = ExtResource( 277 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 text = "1:01:1"
 scroll_active = false
-script = ExtResource( 280 )
+script = ExtResource( 279 )
 
 [node name="ms" type="Timer" parent="TimerPopup/Timer"]
 wait_time = 0.1
@@ -641,54 +628,47 @@ editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 popup_exclusive = true
-script = ExtResource( 281 )
+script = ExtResource( 280 )
 
 [node name="bg" type="Sprite" parent="TimeUpPopup"]
-position = Vector2( 512.654, 294.114 )
-scale = Vector2( 1.281, 1.02512 )
-texture = ExtResource( 282 )
+visible = false
+position = Vector2( 512.654, 301.651 )
+scale = Vector2( 1.281, 1 )
+texture = ExtResource( 281 )
 
 [node name="gameOverAni" type="AnimatedSprite" parent="TimeUpPopup"]
-visible = false
-position = Vector2( 512.654, 298.636 )
-scale = Vector2( 1.28103, 1.01005 )
+position = Vector2( 512.654, 301.651 )
+scale = Vector2( 1.28103, 1 )
 frames = SubResource( 8 )
 animation = "gameover"
 
-[node name="backToIsland" type="TouchScreenButton" parent="TimeUpPopup"]
+[node name="backToUcl" type="TouchScreenButton" parent="TimeUpPopup"]
 position = Vector2( 217.88, 264.457 )
-scale = Vector2( 1.44321, 1.47097 )
+scale = Vector2( 1.443, 1.471 )
 normal = ExtResource( 254 )
 
-[node name="Label" type="Label" parent="TimeUpPopup/backToIsland"]
-margin_left = 7.88881
-margin_top = -3.90288
-margin_right = 95.8888
-margin_bottom = 24.0971
+[node name="Label" type="Label" parent="TimeUpPopup/backToUcl"]
+margin_left = 7.889
+margin_top = -3.903
+margin_right = 95.889
+margin_bottom = 24.097
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 255 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Back to Island"
+text = "Back to UCL"
 
 [node name="getHelp" type="TouchScreenButton" parent="TimeUpPopup"]
 position = Vector2( 577.179, 263.72 )
-scale = Vector2( 1.48069, 1.51393 )
+scale = Vector2( 1.481, 1.514 )
 normal = ExtResource( 256 )
 
-[node name="Label2" type="Label" parent="TimeUpPopup/getHelp"]
-margin_left = 38.5689
+[node name="Label" type="Label" parent="TimeUpPopup/getHelp"]
+margin_left = 38.569
 margin_top = -5.0
-margin_right = 99.5689
+margin_right = 99.569
 margin_bottom = 23.0
 rect_scale = Vector2( 2, 2 )
 custom_fonts/font = ExtResource( 255 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Get Help"
-
-[node name="timePowerup" type="TouchScreenButton" parent="."]
-position = Vector2( 930.918, 13.948 )
-scale = Vector2( 0.119945, 0.119945 )
-normal = ExtResource( 325 )
 
 [node name="timePowerupQuantityLbl" type="RichTextLabel" parent="."]
 margin_left = 966.603
@@ -696,7 +676,7 @@ margin_top = 1.5802
 margin_right = 1010.6
 margin_bottom = 78.5802
 rect_scale = Vector2( 0.7, 0.7 )
-custom_fonts/normal_font = ExtResource( 278 )
+custom_fonts/normal_font = ExtResource( 277 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
@@ -704,12 +684,12 @@ scroll_active = false
 visible = true
 margin_right = 40.0
 margin_bottom = 40.0
-script = ExtResource( 326 )
+script = ExtResource( 324 )
 
 [node name="gameClearAni" type="AnimatedSprite" parent="gameClearPopup"]
 position = Vector2( 510.28, 299.25 )
-scale = Vector2( 2.15907, 2.24668 )
-frames = ExtResource( 327 )
+scale = Vector2( 2.159, 2.247 )
+frames = ExtResource( 325 )
 animation = "gameClear"
 
 [node name="gameClearControl" type="Control" parent="gameClearPopup"]
@@ -718,39 +698,37 @@ margin_bottom = 40.0
 
 [node name="bg" type="Sprite" parent="gameClearPopup/gameClearControl"]
 position = Vector2( 509.884, 298.582 )
-scale = Vector2( 0.417228, 0.303423 )
-texture = ExtResource( 328 )
+scale = Vector2( 0.417, 0.303 )
+texture = ExtResource( 326 )
 
 [node name="stars" type="AnimatedSprite" parent="gameClearPopup/gameClearControl"]
 position = Vector2( 525.306, 102.298 )
-scale = Vector2( 1.69981, 1.69981 )
-frames = ExtResource( 329 )
-animation = "3star"
+scale = Vector2( 1.7, 1.7 )
+frames = ExtResource( 327 )
+animation = "1star"
 
 [node name="scoreLbl" type="RichTextLabel" parent="gameClearPopup/gameClearControl"]
-margin_left = 436.575
+margin_left = 388.154
 margin_top = 215.723
-margin_right = 597.575
+margin_right = 549.154
 margin_bottom = 271.723
 rect_scale = Vector2( 2, 2 )
 custom_fonts/normal_font = ExtResource( 255 )
 custom_colors/default_color = Color( 0, 0, 0, 1 )
-text = "YOUR SCORE"
-scroll_active = false
 
-[node name="BackToWorld" type="TouchScreenButton" parent="gameClearPopup/gameClearControl"]
+[node name="backToUCL" type="TouchScreenButton" parent="gameClearPopup/gameClearControl"]
 position = Vector2( 393.535, 285.506 )
-scale = Vector2( 1.45493, 1.45493 )
+scale = Vector2( 1.455, 1.455 )
 normal = ExtResource( 256 )
 
-[node name="Label" type="Label" parent="gameClearPopup/gameClearControl/BackToWorld"]
-margin_left = 15.7679
-margin_top = 2.87498
-margin_right = 154.768
-margin_bottom = 35.875
+[node name="Label" type="Label" parent="gameClearPopup/gameClearControl/backToUCL"]
+margin_left = 25.0
+margin_top = 3.0
+margin_right = 124.0
+margin_bottom = 36.0
 rect_scale = Vector2( 1.5, 1.5 )
 custom_fonts/font = ExtResource( 255 )
-text = "BACK TO WORLD"
+text = "BACK TO UCL"
 [connection signal="animation_finished" from="Ready" to="." method="_on_Ready_animation_finished"]
 [connection signal="popup_hide" from="Questions" to="." method="_on_Questions_popup_hide"]
 [connection signal="animation_finished" from="Questions/correctWrongAni" to="Questions" method="_on_correctWrongAni_animation_finished"]

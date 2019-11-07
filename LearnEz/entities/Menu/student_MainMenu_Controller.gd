@@ -23,7 +23,6 @@ func usercreations_pressed():
 func assignments_pressed():
 	root.switch_scene("res://entities/Assignment/AssignmentController.tscn")
 	
-
 func leaderboard_pressed():
 	root.switch_scene("res://entities/Leaderboard/LeaderboardController.tscn")
 	

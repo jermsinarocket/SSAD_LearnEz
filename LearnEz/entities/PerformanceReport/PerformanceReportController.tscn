@@ -97,7 +97,7 @@ texture = ExtResource( 8 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 9 )
 animation = "loading"
-frame = 2
+frame = 17
 playing = true
 
 [node name="refresh_btn" type="TouchScreenButton" parent="."]

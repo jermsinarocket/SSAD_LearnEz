@@ -15,8 +15,7 @@ scale = Vector2( 0.853, 0.501 )
 texture = ExtResource( 2 )
 
 [node name="Logo" type="Sprite" parent="."]
-position = Vector2( 147.775, 63.8409 )
-scale = Vector2( 0.824136, 0.824136 )
+position = Vector2( 179.55, 78.85 )
 texture = ExtResource( 3 )
 
 [node name="playgame" type="TouchScreenButton" parent="."]

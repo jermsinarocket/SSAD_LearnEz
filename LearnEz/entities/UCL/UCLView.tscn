@@ -40,62 +40,62 @@ text = "USER CREATED LEVEL"
 
 [node name="UCLs" type="Node" parent="."]
 
-[node name="1" type="TouchScreenButton" parent="UCLs"]
+[node name="ucl1" type="TouchScreenButton" parent="UCLs"]
 position = Vector2( 102.028, 135.465 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/1"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl1"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
 
-[node name="2" type="TouchScreenButton" parent="UCLs"]
+[node name="ucl2" type="TouchScreenButton" parent="UCLs"]
 position = Vector2( 406.396, 137.18 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/2"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl2"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
 
-[node name="3" type="TouchScreenButton" parent="UCLs"]
+[node name="ucl3" type="TouchScreenButton" parent="UCLs"]
 position = Vector2( 712.479, 136.323 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/3"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl3"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
 
-[node name="4" type="TouchScreenButton" parent="UCLs"]
-position = Vector2( 725.339, 342.093 )
+[node name="ucl4" type="TouchScreenButton" parent="UCLs"]
+position = Vector2( 114.944, 338.883 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/4"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl4"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
 
-[node name="5" type="TouchScreenButton" parent="UCLs"]
+[node name="ucl5" type="TouchScreenButton" parent="UCLs"]
 position = Vector2( 422.686, 342.95 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/5"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl5"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
 
-[node name="6" type="TouchScreenButton" parent="UCLs"]
-position = Vector2( 96.8833, 345.522 )
+[node name="ucl6" type="TouchScreenButton" parent="UCLs"]
+position = Vector2( 734.899, 342.801 )
 scale = Vector2( 0.41, 0.41 )
 normal = ExtResource( 6 )
 
-[node name="Sprite" type="Sprite" parent="UCLs/6"]
+[node name="Sprite" type="Sprite" parent="UCLs/ucl6"]
 position = Vector2( 246.877, 397.499 )
 scale = Vector2( 1.412, 0.842 )
 texture = ExtResource( 7 )
@@ -119,7 +119,7 @@ position = Vector2( 563.348, 334.743 )
 z_index = 1
 frames = ExtResource( 10 )
 animation = "loading"
-frame = 23
+frame = 8
 playing = true
 
 [node name="loadingBackground" type="Sprite" parent="loading"]
@@ -158,10 +158,10 @@ custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
 [node name="UCLTitle4" type="RichTextLabel" parent="UCLTitle"]
-margin_left = 102.856
-margin_top = 477.2
-margin_right = 289.856
-margin_bottom = 517.2
+margin_left = 120.541
+margin_top = 471.758
+margin_right = 307.541
+margin_bottom = 511.758
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
@@ -176,10 +176,10 @@ custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 
 [node name="UCLTitle6" type="RichTextLabel" parent="UCLTitle"]
-margin_left = 734.742
-margin_top = 474.628
-margin_right = 921.742
-margin_bottom = 514.628
+margin_left = 741.958
+margin_top = 474.139
+margin_right = 928.958
+margin_bottom = 514.139
 custom_colors/default_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_selected = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )

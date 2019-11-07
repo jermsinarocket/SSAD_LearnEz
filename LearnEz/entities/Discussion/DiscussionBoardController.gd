@@ -199,7 +199,14 @@ func go_right_discussion_pressed():
 
 func _notification(what):
 	if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-		if(userModel.getUserRole == 'Student'):
+		if(userModel.getUserRole() == 'Student'):
+			root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
+		else:
+			root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
+			
+func _input(delta):
+	if Input.is_action_pressed('ui_cancel'):
+		if(userModel.getUserRole() == 'Student'):
 			root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
 		else:
 			root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")

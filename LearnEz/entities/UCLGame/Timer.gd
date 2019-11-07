@@ -1,13 +1,12 @@
 extends RichTextLabel
 
 var ms = 0
-var s = 59
-var m = 1
+var s = 30
+var m = 3
 var running = true
 signal no_time
 	
 func _process(delta):
-	
 	if(m == -1):
 		self.running == false
 		queue_free()
@@ -25,4 +24,4 @@ func _process(delta):
 	
 func _on_ms_timeout():
 	ms -= 1
-	pass # Replace with function body.
+	pass 

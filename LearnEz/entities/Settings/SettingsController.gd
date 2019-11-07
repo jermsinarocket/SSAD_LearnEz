@@ -87,9 +87,12 @@ func _notification(what):
 		else:
 			root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
 			
-func _process(delta):
-	if Input.is_action_pressed('ui_cancel'):
-		root.switch_scene("res://entities/Menu/"+userModel.getUserRole()+"_MainMenu_Controller.tscn")
+func _input(delta):
+	if Input.is_action_just_pressed('ui_cancel'):
+		if (userModel.getUserRole() == "Student"):
+			root.switch_scene("res://entities/Menu/Student_MainMenu_Controller.tscn")
+		else:
+			root.switch_scene("res://entities/Menu/Teacher_MainMenu_Controller.tscn")
 
 func renderAvatarPage():
 	root.switch_scene("res://entities/Settings/AvatarController.tscn")
