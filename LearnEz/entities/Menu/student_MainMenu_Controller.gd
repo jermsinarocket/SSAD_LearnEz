@@ -13,21 +13,15 @@ func _ready():
 	$settings.connect("pressed",self,"settings_pressed")
 	pass 
 
-#Testing only (Comment out otherwise)
-func _notification(what):
-    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
-
 func playgame_pressed():
 	root.switch_scene("res://entities/World/WorldController.tscn")
 	
 
 func usercreations_pressed():
 	root.switch_scene("res://entities/UCL/UCLView.tscn")
-	
 
 func assignments_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/Assignment/AssignmentController.tscn")
 	
 
 func leaderboard_pressed():

@@ -11,13 +11,8 @@ func _ready():
 	$Discussion_Board.connect("pressed",self,"discussion_board_pressed")
 	pass 
 
-#Testing only
-func _notification(what):
-    if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
-        root.return_to_last()
-
 func assignment_pressed():
-	root.switch_scene("res://entities/Settings/SettingsController.tscn")
+	root.switch_scene("res://entities/Assignment/AssignmentController.tscn")
 
 func settings_pressed():
 	root.switch_scene("res://entities/Settings/SettingsController.tscn")
