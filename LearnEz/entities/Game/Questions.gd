@@ -22,7 +22,7 @@ func _ready():
 	pass 
 
 func loadCurrentQuestion():
-	print(gameModel.currDifficulty)
+	print("Current Difficulty" + str(gameModel.currDifficulty))
 	buttonsToHide = []
 	for item in self.get_children():
 		item.show()

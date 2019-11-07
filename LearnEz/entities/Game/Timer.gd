@@ -2,7 +2,7 @@ extends RichTextLabel
 
 var ms = 0
 var s = 30
-var m = 1
+var m = 3
 var running = true
 signal no_time
 	

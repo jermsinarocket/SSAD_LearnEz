@@ -7,9 +7,9 @@ func _ready():
 	$gameClearControl/BackToWorld.connect("pressed",self,"backToWorld")
 	pass # Replace with function body.
 
-
 func playAni():
 	SoundManager.play_me("res://assets/sounds/gameClear.ogg",true,true,"res://assets/sounds/gameTheme.ogg")
+	updateUserGameClear()
 	$gameClearControl.hide()
 	$gameClearAni.play("gameClear")
 
@@ -36,3 +36,18 @@ func backToWorld():
 	SoundManager.stop_me("res://assets/sounds/gameClear.ogg")
 	SoundManager.play_bgm("themeSong",false)
 	root.switch_scene("res://entities/World/WorldController.tscn")
+	
+func updateUserGameClear():
+	var apiUrl = "UserUnlockWorld/game/updateUser/" + userModel.getUserId()
+	print(levelModel.getLevelIDByIdx(levelModel.getSelectedLevelIdx()))
+	print(worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx))
+	var data = {
+              "score" : gameModel.getScore(),
+              "levelID": levelModel.getLevelIDByIdx(levelModel.getSelectedLevelIdx()),
+              "worldID": worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)
+	}
+	
+	apiController.apiCallPut(data,apiUrl)
+	yield(apiController,"request_completed")
+	print(apiController.getResult())
+	pass

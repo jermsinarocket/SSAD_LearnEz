@@ -464,7 +464,6 @@ format = 1
 tile_data = PoolIntArray( -196618, 1, 0 )
 
 [node name="Player" type="KinematicBody2D" parent="."]
-editor/display_folded = true
 collision/safe_margin = 0.02
 script = ExtResource( 4 )
 SPEED = 200
@@ -479,7 +478,7 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 4
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -502,7 +501,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 1
+frame = 3
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -510,7 +509,7 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 1
+frame = 4
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]
@@ -633,6 +632,7 @@ custom_colors/default_color = Color( 0.8, 0.121569, 0.121569, 1 )
 scroll_active = false
 
 [node name="TimerPopup" type="Popup" parent="."]
+editor/display_folded = true
 visible = true
 margin_top = -5.72791
 margin_right = 40.0
@@ -668,11 +668,12 @@ popup_exclusive = true
 script = ExtResource( 281 )
 
 [node name="bg" type="Sprite" parent="TimeUpPopup"]
-position = Vector2( 512.654, 301.651 )
-scale = Vector2( 1.281, 1 )
+position = Vector2( 512.654, 294.114 )
+scale = Vector2( 1.281, 1.02512 )
 texture = ExtResource( 282 )
 
 [node name="gameOverAni" type="AnimatedSprite" parent="TimeUpPopup"]
+visible = false
 position = Vector2( 512.654, 298.636 )
 scale = Vector2( 1.28103, 1.01005 )
 frames = SubResource( 8 )
@@ -724,7 +725,7 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 scroll_active = false
 
 [node name="gameClearPopup" type="Popup" parent="."]
-visible = true
+editor/display_folded = true
 margin_right = 40.0
 margin_bottom = 40.0
 script = ExtResource( 326 )

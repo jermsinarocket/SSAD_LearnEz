@@ -16,10 +16,11 @@ func _ready():
 	$timePowerupQuantityLbl.append_bbcode(userInventoryModel.getQuantityByIdx(1))
 	$timePowerup.connect("pressed",self,"timeUp")
 	gameModel.setNumQuestions(numEnemies)
-	
 	pass
 
 func loadQuestions():
+	$timePowerup.hide()
+	$timePowerupQuantityLbl.hide()
 	$Ready.play("ready")
 	#var apiUrl = gameModel.getBaseURL() + levelModel.getLevelIDByIdx(levelModel.selectedLevelIdx) + "/" + worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)
 	var apiUrl = gameModel.getBaseURL() + "5/World1" 
@@ -36,6 +37,8 @@ func _on_Ready_animation_finished():
 	$Ready.queue_free()
 	$TimerPopup.popup()
 	$TimerPopup/Timer/ms.start()
+	$timePowerup.show()
+	$timePowerupQuantityLbl.show()
 	Player.set_physics_process(true)
 	pass 
 
@@ -69,6 +72,7 @@ func _on_Questions_popup_hide():
 		Player.set_physics_process(false)
 		gameModel.calculateScore(gameTimer.m,gameTimer.s,gameTimer.ms)
 		updateUserInventory()
+		yield(apiController,"request_completed")
 		$gameClearPopup.popup()
 	pass
 	
@@ -76,4 +80,6 @@ func updateUserInventory():
 	var apiUrl = userInventoryModel.getBaseUrl() + "/gameInventory/" + userModel.getUserId()
 	var data = {"power1Quantity": int(userInventoryModel.getQuantityByIdx(0)),"power2Quantity": int(userInventoryModel.getQuantityByIdx(1))}
 	apiController.apiCallPut(data,apiUrl)
+	
+	
 
