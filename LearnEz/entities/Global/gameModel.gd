@@ -4,7 +4,6 @@ var baseUrl = "question/"
 var currDifficulty = 5
 var allQuestions = [[],[],[],[],[],[],[],[],[],[]]
 
-
 func setQuestions(questions):
 	self.questions = questions
 
@@ -20,6 +19,9 @@ func setAllQuestionsByDifficulty(idx,question):
 func getQuestionsByDifficulty():
 	return (allQuestions[currDifficulty-1])
 
+func removeQuestionFromDifficulty(idx):
+	getQuestionsByDifficulty().remove(idx)
+	
 func increaseDifficulty():
 	if(currDifficulty != 10):
 		currDifficulty += 1

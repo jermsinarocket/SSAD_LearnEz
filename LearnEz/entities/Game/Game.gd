@@ -22,7 +22,6 @@ func loadQuestions():
 		var idx = difficulty - 1
 		gameModel.setAllQuestionsByDifficulty(idx,question)
 
-	#print(gameModel.getQuestionsByDifficulty().size())
 	#gameModel.getQuestionsByDifficulty().remove(0)
 	#print(gameModel.getQuestionsByDifficulty().size())
 	#print(userInventoryModel.getQuantityByIdx(0))
@@ -40,18 +39,7 @@ func _on_Timer_no_time():
 	gameTimer.set_process(false)
 	$TimerPopup/Timer/ms.stop()
 	$TimerPopup/bg.hide()
-	
-	#var noTimeBg = Sprite.new()
-	
-	#var noTimeIcon = preload("res://images/timesUp.png")
-	#var scale = Vector2(0.4, 0.4)
-	
-	#noTimeBg.set_texture(noTimeIcon)
-	#noTimeBg.set_scale(scale)
-	#noTimeBg.position.x = 499.059
-	#noTimeBg.position.y = 65.183
-	#self.add_child(noTimeBg)
+
 	$TimeUpPopup.popup()
-	
 	Player.set_physics_process(false)
 	pass
