@@ -414,7 +414,7 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 5
+frame = 1
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -438,7 +438,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 7
+frame = 4
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -446,10 +446,11 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
-frame = 5
+frame = 1
 playing = true
 
-[node name="Enemies" type="Node" parent="Questions"]
+[node name="Enemies" type="Control" parent="Questions"]
+editor/display_folded = true
 
 [node name="enemy1" type="AnimatedSprite" parent="Questions/Enemies"]
 visible = false
@@ -487,7 +488,8 @@ custom_colors/default_color = Color( 0, 0, 0, 1 )
 tab_size = 5
 scroll_active = false
 
-[node name="questionOptions" type="Node" parent="Questions"]
+[node name="questionOptions" type="Control" parent="Questions"]
+editor/display_folded = true
 
 [node name="option1" type="TouchScreenButton" parent="Questions/questionOptions"]
 position = Vector2( 162.924, 433.883 )
@@ -509,7 +511,8 @@ position = Vector2( 546.446, 520.193 )
 scale = Vector2( 1.88027, 1.52367 )
 normal = ExtResource( 256 )
 
-[node name="questionOptionsLbl" type="Node" parent="Questions"]
+[node name="questionOptionsLbl" type="Control" parent="Questions"]
+editor/display_folded = true
 
 [node name="option1Lbl" type="RichTextLabel" parent="Questions/questionOptionsLbl"]
 margin_left = 176.0

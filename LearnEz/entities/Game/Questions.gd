@@ -18,7 +18,12 @@ func _ready():
 	pass 
 
 func loadCurrentQuestion():
+	
+	for item in self.get_children():
+		item.show()
+		
 	get_parent().get_node("TimerPopup").popup()
+	
 	loadEnemy()
 	
 	$avatarAni.play("avatar2")
@@ -37,11 +42,17 @@ func loadCurrentQuestion():
 func loadEnemy():
 	randomize()
 	var randomEnemyIndex = ceil(rand_range(-1, 2))
-	enemy = $Enemies.get_child(randomEnemyIndex)
-	enemy.show()
-	enemy.play("idle")
+	
+	for item in $Enemies.get_children():
+		if(item.get_index() == randomEnemyIndex):
+			enemy = item
+			enemy.show()
+			enemy.play("idle")
+		else:
+			item.hide()
 
 func setQuestionTitleTxt():
+	
 	$questionTitleLbl.clear()
 	$questionTitleLbl.append_bbcode("[center]" + currQuestion['questionTitle'])
 	
@@ -97,6 +108,11 @@ func handleWrong():
 
 
 func resetAll():
-	for button in $questionOptions.get_children():
-		var btnImg = preload("res://images/questionOptButton.png")
-		button.set_texture(btnImg)
+#	for button in $questionOptions.get_children():
+#		if(button.get_index() == correctOption):
+#			button.modulate = Color((255/255), (165/255), 0)
+#		else:
+#			button.modulate = Color((255/255), (165/255), 0)
+#
+	for item in self.get_children():
+		item.hide()
