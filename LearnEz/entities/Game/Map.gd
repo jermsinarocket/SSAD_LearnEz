@@ -27,8 +27,7 @@ func _ready():
 		
 func _physics_process(delta):
 	if enemyloc.size() == 0:
-		#set_physics_process(false)
-		#print(numOfEnemies)
+		set_physics_process(false)
 		pass
 	var pos = Player.get_position()
 	var tile = Map.world_to_map(pos)

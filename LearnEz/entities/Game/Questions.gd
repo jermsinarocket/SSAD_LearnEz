@@ -7,7 +7,6 @@ var correctOption
 var questions
  
 func _ready():
-	
 	connect("about_to_show",self,"loadCurrentQuestion")
 	for enemy in $Enemies.get_children():
 		enemy.hide()
@@ -15,10 +14,14 @@ func _ready():
 	for button in $questionOptions.get_children():
 		button.connect("pressed",self,"handleSelectOption",[button])
 		button.hide()
+		
+	$ffPowerUpLbl.clear()
+	$ffPowerUpLbl.append_bbcode(userInventoryModel.getQuantityByIdx(0))
+	#$timePowerup.connect("pressed",self,"timeUp")
 	pass 
 
 func loadCurrentQuestion():
-	
+	print(gameModel.currDifficulty)
 	for item in self.get_children():
 		item.show()
 	$correctWrongAni.hide()
@@ -27,7 +30,7 @@ func loadCurrentQuestion():
 	
 	loadEnemy()
 	
-	$avatarAni.play("avatar2")
+	$avatarAni.play(userModel.getUserAvatar())
 	
 	questions = gameModel.getQuestionsByDifficulty()
 	randomize()
@@ -48,7 +51,6 @@ func loadEnemy():
 		if(item.get_index() == randomEnemyIndex):
 			enemy = item
 			enemy.show()
-			enemy.frame = 1
 			enemy.play("idle")
 		else:
 			item.hide()
@@ -98,18 +100,21 @@ func highlightCorrectOption():
 			button.modulate = Color(1,0,0)
 		
 func handleCorrect():
+	enemy.frame = 1
 	enemy.play("down")
 	gameModel.increaseDifficulty()
 	playCorrectWrongAni("correct")
 	pass
 	
 func handleWrong():
+	enemy.frame = 1
 	enemy.play("swing")
 	gameModel.decreaseDifficulty()
 	playCorrectWrongAni("wrong")
 	pass
 
 func playCorrectWrongAni(value):
+	$correctWrongAni.frame = 1
 	$correctWrongAni.show()
 	$correctWrongAni.play(value)
 		
@@ -118,9 +123,10 @@ func resetAll():
 		button.modulate = Color(1, 1,1,1)
 	for item in self.get_children():
 		item.hide()
+	gameModel.decreaseQuestions()
+	self.hide()
 	pass
 
 func _on_correctWrongAni_animation_finished():
 	resetAll()
-	$correctWrongAni.frame = 1
 	pass 

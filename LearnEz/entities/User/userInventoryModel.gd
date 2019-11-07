@@ -16,3 +16,6 @@ func getQuantityByIdx(idx):
 
 func getPowerIdByIdx(idx):
 	return userInv[idx]['powerID']
+	
+func reducePowerupQuantyByIdx(idx):
+	userInv[idx]['quantity'] = str(int(userInv[idx]['quantity']) - 1)

@@ -391,7 +391,7 @@ frames = ExtResource( 20 )
 animation = "2star"
 
 [node name="level3star" type="AnimatedSprite" parent="Stars"]
-position = Vector2( 570.047, 404.499 )
+position = Vector2( 519.547, 303.5 )
 scale = Vector2( 0.607129, 0.607129 )
 frames = ExtResource( 20 )
 animation = "2star"
@@ -538,5 +538,5 @@ position = Vector2( 552.116, 311.961 )
 z_index = 1
 frames = ExtResource( 24 )
 animation = "loading"
-frame = 8
+frame = 1
 playing = true

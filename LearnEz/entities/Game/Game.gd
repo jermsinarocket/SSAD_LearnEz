@@ -8,6 +8,9 @@ func _ready():
 	get_tree().set_auto_accept_quit(false)
 	$TimerPopup/bg.modulate = Color(1,1,1,0.5)
 	loadQuestions()
+	$timePowerupQuantityLbl.clear()
+	$timePowerupQuantityLbl.append_bbcode(userInventoryModel.getQuantityByIdx(1))
+	$timePowerup.connect("pressed",self,"timeUp")
 	pass
 
 func loadQuestions():
@@ -43,4 +46,22 @@ func _on_Timer_no_time():
 
 	$TimeUpPopup.popup()
 	Player.set_physics_process(false)
+	pass
+
+func timeUp():
+	if(userInventoryModel.getQuantityByIdx(1) == '0'):
+		pass
+	else:
+		gameTimer.s += 20
+		if(gameTimer.s >= 60):
+			gameTimer.m += 1
+			gameTimer.s -= 60
+		userInventoryModel.reducePowerupQuantyByIdx(1)
+		$timePowerupQuantityLbl.clear()
+		$timePowerupQuantityLbl.append_bbcode(userInventoryModel.getQuantityByIdx(1))
+	pass
+	
+func _on_Questions_popup_hide():
+	if(gameModel.numQuestions == 0):
+		Player.set_physics_process(false)
 	pass

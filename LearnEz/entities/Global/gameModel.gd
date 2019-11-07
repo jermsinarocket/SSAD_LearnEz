@@ -3,7 +3,7 @@ extends Node
 var baseUrl = "question/"
 var currDifficulty = 5
 var allQuestions = [[],[],[],[],[],[],[],[],[],[]]
-
+var numQuestions = 5
 func setQuestions(questions):
 	self.questions = questions
 
@@ -32,3 +32,9 @@ func decreaseDifficulty():
 	
 func resetDifficulty():
 	currDifficulty = 5
+	
+func decreaseQuestions():
+	numQuestions -= 1
+
+func resetNumQuestions():
+	numQuestions = 5

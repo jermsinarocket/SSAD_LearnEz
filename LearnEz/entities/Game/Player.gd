@@ -8,7 +8,7 @@ var screen_size
 
 func _ready():
 	set_physics_process(false)
-	$AnimatedSprite.play("avatar2")
+	$AnimatedSprite.play(userModel.getUserAvatar())
 	screen_size = get_viewport().size
 	
 func _physics_process(delta):

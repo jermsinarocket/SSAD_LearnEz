@@ -24,4 +24,4 @@ func _process(delta):
 	
 func _on_ms_timeout():
 	ms -= 1
-	pass # Replace with function body.
+	pass 
