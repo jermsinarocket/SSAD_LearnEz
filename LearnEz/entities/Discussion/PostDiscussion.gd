@@ -28,6 +28,7 @@ func post_discussion_pressed():
 		$RichTextLabel3.add_text("Please input discussion details")
 		$RichTextLabel3.show()
 	else:
+		$loading.popup()
 		$RichTextLabel3.clear()
 		var user_id = userModel.getUserId()
 		var datetime_dictionary = OS.get_datetime()
@@ -47,6 +48,7 @@ func post_discussion_pressed():
 		var result = apiController.getResult()
 		var responseCode = apiController.getResponseCode()
 		
+		$loading.hide()
 		if (str(responseCode) == "200"):
 			$Post_Discussion_Success_Popup.show()
 		else:

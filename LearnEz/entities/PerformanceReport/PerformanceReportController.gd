@@ -4,6 +4,7 @@ var selectedClass = userModel.getUserGroup()[0]['groupID']
 onready var chart_node = get_node('Graph')
 
 func _ready():
+	
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
 	
@@ -24,6 +25,7 @@ func _ready():
 	set_process(true)
 	loadStudentsInformation()
 	$generateReportBtn.connect("pressed",self,"generateReport")
+	$refresh_btn.connect("pressed",self,"loadGraph")
 	pass
 	
 func _notification(what):
@@ -87,6 +89,7 @@ func handleSelectStudent(button):
 	root.switch_scene("res://entities/PerformanceReport/StudentPerformanceReport.tscn")
 	
 func loadGraph():
+	$loading.popup()	
 	chart_node.clear_chart()
 	
 	var apiURL = "group/students/score/" + selectedClass

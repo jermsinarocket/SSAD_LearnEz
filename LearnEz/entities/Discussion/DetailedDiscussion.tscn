@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/Discussion/DetailedDiscussion.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://images/button_up.png" type="Texture" id=6]
 [ext_resource path="res://images/button_down.png" type="Texture" id=7]
 [ext_resource path="res://images/button_new-comment.png" type="Texture" id=8]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=9]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://images/refresh.png" type="Texture" id=11]
 
 [node name="DetailedDiscussion" type="Node2D"]
 script = ExtResource( 1 )
@@ -214,3 +217,26 @@ normal = ExtResource( 7 )
 position = Vector2( 402.857, -50 )
 scale = Vector2( 0.869877, 2.06511 )
 normal = ExtResource( 8 )
+
+[node name="loading" type="Popup" parent="."]
+visible = true
+margin_top = 20.4056
+margin_right = 40.0
+margin_bottom = 60.4056
+
+[node name="loadingbg" type="Sprite" parent="loading"]
+position = Vector2( 513.195, 303.252 )
+scale = Vector2( 2.285, 1 )
+texture = ExtResource( 9 )
+
+[node name="loading" type="AnimatedSprite" parent="loading"]
+position = Vector2( 552.116, 311.961 )
+frames = ExtResource( 10 )
+animation = "loading"
+frame = 11
+playing = true
+
+[node name="refreshBtn" type="TouchScreenButton" parent="."]
+position = Vector2( 732.704, 336.875 )
+scale = Vector2( 0.0940729, 0.0940729 )
+normal = ExtResource( 11 )

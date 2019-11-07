@@ -13,25 +13,30 @@ var number_to_minus
 func _ready():
 	root.set_screen_orientation(0)
 	
-	$discussion_1/discussion_id_1.hide()
-	$discussion_2/discussion_id_2.hide()
-	$discussion_3/discussion_id_3.hide()
-	$discussion_4/discussion_id_4.hide()
-	
 	render_discussion()
 	
 	$NewDiscussion_Btn.connect("pressed",self,"new_discussion_pressed")
 	$GoLeft_Btn.connect("pressed",self,"go_left_discussion_pressed")
 	$GoRight_Btn.connect("pressed",self,"go_right_discussion_pressed")
+	$refreshbtn.connect("pressed",self,"refresh_discussion")
 	
 	$discussion_1/discussion_viewmore_1.connect("meta_clicked",self,"discussion_clicked_1")
 	$discussion_2/discussion_viewmore_2.connect("meta_clicked",self,"discussion_clicked_2")
 	$discussion_3/discussion_viewmore_3.connect("meta_clicked",self,"discussion_clicked_3")
 	$discussion_4/discussion_viewmore_4.connect("meta_clicked",self,"discussion_clicked_4")
-	
+
 	pass 
 
 func render_discussion():
+	
+	$discussion_1.hide()
+	$discussion_2.hide()
+	$discussion_3.hide()
+	$discussion_4.hide()	
+	$GoLeft_Btn.hide()
+	$GoRight_Btn.hide()
+	
+	$loading.popup()
 	
 	$discussion_1/discussion_title_1.clear()
 	$discussion_1/discussion_details_1.clear()
@@ -144,6 +149,8 @@ func render_discussion():
 				
 				$discussion_4.show()
 	
+	$loading.hide()
+	
 	if (base_index == max_index):
 		go_right = "false"
 
@@ -180,7 +187,12 @@ func go_left_discussion_pressed():
 	base_index = base_index - number_to_minus
 	render_discussion()
 	pass
-
+	
+func refresh_discussion():
+	base_index = base_index - number_to_minus + 4
+	render_discussion()
+	pass
+	
 func go_right_discussion_pressed():
 	render_discussion()
 	pass

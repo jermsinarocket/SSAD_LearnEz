@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/Discussion/DiscussionBoardController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -8,6 +8,9 @@
 [ext_resource path="res://images/modal_window.png" type="Texture" id=6]
 [ext_resource path="res://images/button_left.png" type="Texture" id=7]
 [ext_resource path="res://images/button_right.png" type="Texture" id=8]
+[ext_resource path="res://images/modal_box.png" type="Texture" id=9]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=10]
+[ext_resource path="res://images/refresh.png" type="Texture" id=11]
 
 [node name="DiscussionBoardController" type="Node2D"]
 script = ExtResource( 1 )
@@ -39,6 +42,7 @@ scale = Vector2( 1.21171, 1.19512 )
 normal = ExtResource( 5 )
 
 [node name="discussion_1" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 295.516, 295 )
 scale = Vector2( 0.336903, 0.242105 )
 texture = ExtResource( 6 )
@@ -99,6 +103,7 @@ bbcode_text = "[url={\"data\"=\"\"}]View More[/url]"
 text = "View More"
 
 [node name="discussion_2" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 722, 295 )
 scale = Vector2( 0.337, 0.242 )
 texture = ExtResource( 6 )
@@ -157,6 +162,7 @@ bbcode_text = "[url={\"data\"=\"\"}]View More[/url]"
 text = "View More"
 
 [node name="discussion_3" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 297.5, 493 )
 scale = Vector2( 0.337, 0.242 )
 texture = ExtResource( 6 )
@@ -215,6 +221,7 @@ bbcode_text = "[url={\"data\"=\"\"}]View More[/url]"
 text = "View More"
 
 [node name="discussion_4" type="Sprite" parent="."]
+editor/display_folded = true
 position = Vector2( 722, 493 )
 scale = Vector2( 0.337, 0.242 )
 texture = ExtResource( 6 )
@@ -279,3 +286,25 @@ normal = ExtResource( 7 )
 [node name="GoRight_Btn" type="TouchScreenButton" parent="."]
 position = Vector2( 948.215, 375 )
 normal = ExtResource( 8 )
+
+[node name="loading" type="Popup" parent="."]
+editor/display_folded = true
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="loadingbg" type="Sprite" parent="loading"]
+position = Vector2( 513.195, 303.252 )
+scale = Vector2( 2.285, 1 )
+texture = ExtResource( 9 )
+
+[node name="loading" type="AnimatedSprite" parent="loading"]
+position = Vector2( 552.116, 311.961 )
+frames = ExtResource( 10 )
+animation = "loading"
+frame = 2
+playing = true
+
+[node name="refreshbtn" type="TouchScreenButton" parent="."]
+position = Vector2( 95.8322, 158.394 )
+scale = Vector2( 0.0763176, 0.0763176 )
+normal = ExtResource( 11 )

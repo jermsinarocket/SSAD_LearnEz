@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://entities/Leaderboard/LeaderboardController.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://images/global.png" type="Texture" id=8]
 [ext_resource path="res://images/global_pressed.png" type="Texture" id=9]
 [ext_resource path="res://images/button.png" type="Texture" id=10]
+[ext_resource path="res://images/refresh.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.733333, 0.176471, 0.176471, 1 )
@@ -216,3 +217,8 @@ rect_scale = Vector2( 0.6, 0.6 )
 custom_fonts/font = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Rank     Name              Score"
+
+[node name="refresh_btn" type="TouchScreenButton" parent="."]
+position = Vector2( 894.313, 186.1 )
+scale = Vector2( 0.0913093, 0.0913093 )
+normal = ExtResource( 11 )

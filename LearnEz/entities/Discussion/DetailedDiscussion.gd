@@ -5,6 +5,7 @@ extends Node
 var apiUrl_discussion = "discussion/"
 var apiUrl_discussion_numOfComments = "discussion/numOfComments/"
 var apiUrl_discussion_comments = "discussion/comments/"
+var apiUrl_discussion_comments_call
 var result_discussion
 var result_discussion_numOfComments
 var result_discussion_comments
@@ -25,25 +26,26 @@ var number_to_minus
 func _ready():
 	root.set_screen_orientation(0)
 	
-	$detailed_discussion/no_comment_label.hide()
+	$detailed_discussion.hide()
 	
 	render_detailed_discussion()
 	
 	$detailed_discussion/ScrollUp_Btn.connect("pressed",self,"scroll_up_comments_pressed")
 	$detailed_discussion/ScrollDown_Btn.connect("pressed",self,"scroll_down_comments_pressed")
 	$detailed_discussion/NewComment_Btn.connect("pressed",self,"new_comment_pressed")
-		
+	$refreshBtn.connect("pressed",self,"refresh_comments")
 	pass 
 
 func render_detailed_discussion():
+	$loading.show()
 	
 	$detailed_discussion/detailed_discussion_title.clear()
 	$detailed_discussion/detailed_discussion_postedby.clear()
 	$detailed_discussion/detailed_discussion_details.clear()
 
-	apiUrl_discussion = apiUrl_discussion + root.discussion_selected
-
-	apiController.apiCallGet(apiUrl_discussion)
+	var apiUrl_discussion_call = apiUrl_discussion + root.discussion_selected
+	
+	apiController.apiCallGet(apiUrl_discussion_call)
 	yield(apiController, "request_completed")
 	
 	result_discussion = apiController.getResult()
@@ -54,9 +56,9 @@ func render_detailed_discussion():
 	$detailed_discussion/detailed_discussion_postedby.append_bbcode(result_discussion[0]["name"])
 	$detailed_discussion/detailed_discussion_details.append_bbcode(result_discussion[0]["details"])
 
-	apiUrl_discussion_numOfComments = apiUrl_discussion_numOfComments + root.discussion_selected
+	var apiUrl_discussion_numOfComments_call = apiUrl_discussion_numOfComments + root.discussion_selected
 	
-	apiController.apiCallGet(apiUrl_discussion_numOfComments)
+	apiController.apiCallGet(apiUrl_discussion_numOfComments_call)
 	yield(apiController, "request_completed")
 	
 	result_discussion_numOfComments = apiController.getResult()
@@ -116,12 +118,14 @@ func render_detailed_discussion():
 		$detailed_discussion/detailed_discussion_postedby.append_bbcode(str(time_since_posted))
 		$detailed_discussion/detailed_discussion_postedby.append_bbcode(" months ago")
 	
-	apiUrl_discussion_comments = apiUrl_discussion_comments + root.discussion_selected
+	apiUrl_discussion_comments_call = apiUrl_discussion_comments + root.discussion_selected
 	
 	render_comments()
+	
+	$detailed_discussion.show()
 
 func render_comments():
-	
+	$loading.show()
 	$detailed_discussion/comment_index_1.clear()
 	$detailed_discussion/comment_content_1.clear()
 	$detailed_discussion/comment_postedby_1.clear()
@@ -130,13 +134,14 @@ func render_comments():
 	$detailed_discussion/comment_content_2.clear()
 	$detailed_discussion/comment_postedby_2.clear()
 	
-	apiController.apiCallGet(apiUrl_discussion_comments)
+	apiController.apiCallGet(apiUrl_discussion_comments_call)
 	yield(apiController, "request_completed")
 	
 	result_discussion_comments = apiController.getResult()
 	
 	responseCode_discussion_comments = apiController.getResponseCode()
 	
+	#max_index = result_discussion_comments.size()
 	max_index = int(number_of_comments)
 	number_to_minus = 2
 	
@@ -212,6 +217,8 @@ func render_comments():
 		$detailed_discussion/ScrollDown_Btn.show()
 	else:
 		$detailed_discussion/ScrollDown_Btn.hide()
+		
+	$loading.hide()
 
 func scroll_up_comments_pressed():
 	base_index = base_index - number_to_minus
@@ -220,6 +227,11 @@ func scroll_up_comments_pressed():
 
 func scroll_down_comments_pressed():
 	render_comments()
+	pass
+
+func refresh_comments():
+	base_index = base_index - number_to_minus + 2
+	render_detailed_discussion()
 	pass
 
 func new_comment_pressed():

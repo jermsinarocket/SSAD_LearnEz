@@ -377,7 +377,6 @@ scale = Vector2( 0.166546, 0.166546 )
 texture = ExtResource( 19 )
 
 [node name="Stars" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="level1star" type="AnimatedSprite" parent="Stars"]
 position = Vector2( 125.753, 542.125 )
@@ -392,7 +391,7 @@ frames = ExtResource( 20 )
 animation = "2star"
 
 [node name="level3star" type="AnimatedSprite" parent="Stars"]
-position = Vector2( 521.812, 306.522 )
+position = Vector2( 570.047, 404.499 )
 scale = Vector2( 0.607129, 0.607129 )
 frames = ExtResource( 20 )
 animation = "2star"
@@ -527,7 +526,6 @@ custom_fonts/normal_font = ExtResource( 4 )
 bbcode_enabled = true
 
 [node name="Loading" type="Popup" parent="."]
-editor/display_folded = true
 
 [node name="Sprite" type="Sprite" parent="Loading"]
 position = Vector2( 513.195, 303.252 )
@@ -540,5 +538,5 @@ position = Vector2( 552.116, 311.961 )
 z_index = 1
 frames = ExtResource( 24 )
 animation = "loading"
-frame = 12
+frame = 8
 playing = true

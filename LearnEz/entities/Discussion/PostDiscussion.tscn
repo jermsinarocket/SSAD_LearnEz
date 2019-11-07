@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/Discussion/PostDiscussion.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://images/modal_box.png" type="Texture" id=6]
 [ext_resource path="res://entities/Discussion/Post_Discussion_Success_Popup.gd" type="Script" id=7]
 [ext_resource path="res://images/button_done.png" type="Texture" id=8]
+[ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=9]
 
 [sub_resource type="StyleBoxFlat" id=1]
 bg_color = Color( 0.847059, 0.8, 0.8, 1 )
@@ -128,3 +129,19 @@ text = "Your discussion has been posted successfully!"
 position = Vector2( -70.34, 3.05176e-005 )
 scale = Vector2( 1.41245, 1.47059 )
 normal = ExtResource( 8 )
+
+[node name="loading" type="Popup" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="loadingbg" type="Sprite" parent="loading"]
+position = Vector2( 513.195, 303.252 )
+scale = Vector2( 2.285, 1 )
+texture = ExtResource( 6 )
+
+[node name="loading" type="AnimatedSprite" parent="loading"]
+position = Vector2( 552.116, 311.961 )
+frames = ExtResource( 9 )
+animation = "loading"
+frame = 3
+playing = true

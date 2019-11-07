@@ -12,6 +12,7 @@ func _ready():
 	pass 
 	
 func post_comment_pressed():
+
 	var comment_content = $TextEdit.get_text()
 	
 	if (comment_content == ""):
@@ -19,6 +20,7 @@ func post_comment_pressed():
 		$RichTextLabel2.add_text("Please input comment")
 		$RichTextLabel2.show()
 	else:
+		$loading.popup()
 		$RichTextLabel2.clear()
 		var user_id = userModel.getUserId()
 		var datetime_dictionary = OS.get_datetime()
@@ -37,7 +39,7 @@ func post_comment_pressed():
 		
 		var result = apiController.getResult()
 		var responseCode = apiController.getResponseCode()
-		
+		$loading.hide()
 		if (str(responseCode) == "200"):
 			$Post_Comment_Success_Popup.show()
 		else:

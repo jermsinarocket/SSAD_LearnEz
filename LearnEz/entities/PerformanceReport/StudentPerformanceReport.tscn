@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://entities/PerformanceReport/StudentPerformanceReport.gd" type="Script" id=1]
 [ext_resource path="res://images/background.jpg" type="Texture" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://images/modal_box.png" type="Texture" id=8]
 [ext_resource path="res://images/frames/loading/Loading.tres" type="SpriteFrames" id=9]
 [ext_resource path="res://images/generateReport.png" type="Texture" id=10]
+[ext_resource path="res://images/refresh.png" type="Texture" id=11]
 
 [node name="StudentPerformanceReport" type="Node2D"]
 script = ExtResource( 1 )
@@ -82,10 +83,24 @@ texture = ExtResource( 8 )
 position = Vector2( 511.949, 326.483 )
 frames = ExtResource( 9 )
 animation = "loading"
-frame = 25
+frame = 9
 playing = true
 
 [node name="generateReportBtn" type="TouchScreenButton" parent="."]
 position = Vector2( 805.03, 179.402 )
 scale = Vector2( 0.247917, 0.247917 )
 normal = ExtResource( 10 )
+
+[node name="refresh_btn" type="TouchScreenButton" parent="."]
+position = Vector2( 953.855, 124.004 )
+scale = Vector2( 0.0891244, 0.0891244 )
+normal = ExtResource( 11 )
+
+[node name="WorldNameLbl" type="Label" parent="."]
+margin_left = 203.341
+margin_top = 220.061
+margin_right = 701.341
+margin_bottom = 289.061
+rect_scale = Vector2( 0.3, 0.3 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )

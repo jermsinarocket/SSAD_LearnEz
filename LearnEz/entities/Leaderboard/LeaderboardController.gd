@@ -27,9 +27,12 @@ func _ready():
 		lbl.append_bbcode(result[idx]['worldID'] + " - " + result[idx]['worldName'])
 		
 	loadLeaderboardInformation(ldbType,world)
-	
+	$refresh_btn.connect("pressed",self,"reloadLeaderboard")
 	pass 
 
+func reloadLeaderboard():
+	loadLeaderboardInformation(ldbType,world)
+	
 func _notification(what):
     if (what == MainLoop.NOTIFICATION_WM_GO_BACK_REQUEST):
         root.return_to_last()

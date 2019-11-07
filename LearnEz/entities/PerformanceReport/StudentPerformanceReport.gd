@@ -18,6 +18,8 @@ func _ready():
 	$WorldOpt.select(0)
 	$WorldOpt.connect("item_selected",self,"handleSelectWorld")
 	$generateReportBtn.connect("pressed",self,"generateStudentReport")	
+	$refresh_btn.connect('pressed',self,"loadGraph")
+	$WorldLbl.hide()
 	pass
 	
 func _notification(what):
@@ -76,7 +78,8 @@ func loadGraph():
 		}
 		})
 	chart_node.set_labels(7)
-	
+	$WorldNameLbl.text = ": " + performanceModel.getWorldNameByIdx(performanceModel.selectedWorldIdx)
+	$WorldNameLbl.show()
 	$loading.hide()
 
 func generateStudentReport():
