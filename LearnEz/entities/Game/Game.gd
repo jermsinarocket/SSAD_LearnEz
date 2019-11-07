@@ -1,17 +1,18 @@
 extends Node2D
 
+onready var gameTimer = $TimerPopup/Timer
+onready var Player = $Player
+
 func _ready():
-	
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
-
-	gameModel.resetDifficulty()
 	loadQuestions()
 	pass
-	
+
 func loadQuestions():
-	
-	var apiUrl = gameModel.getBaseURL() + levelModel.getLevelIDByIdx(levelModel.selectedLevelIdx) + "/" + worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)
+	$Ready.play("ready")
+	#var apiUrl = gameModel.getBaseURL() + levelModel.getLevelIDByIdx(levelModel.selectedLevelIdx) + "/" + worldModel.getWorldIDbyIdx(worldModel.selectWorldIdx)
+	var apiUrl = gameModel.getBaseURL() + "5/World1" 
 	apiController.apiCallGet(apiUrl)
 	
 	yield(apiController, "request_completed")
@@ -20,22 +21,37 @@ func loadQuestions():
 		var difficulty = int(question['difficulty'])
 		var idx = difficulty - 1
 		gameModel.setAllQuestionsByDifficulty(idx,question)
-	
+
 	#print(gameModel.getQuestionsByDifficulty().size())
 	#gameModel.getQuestionsByDifficulty().remove(0)
 	#print(gameModel.getQuestionsByDifficulty().size())
-	print(userInventoryModel.getQuantityByIdx(0))
-	$Timer/ms.start()
+	#print(userInventoryModel.getQuantityByIdx(0))
+
+func _on_Ready_animation_finished():
+	$Ready.queue_free()
+	$TimerPopup.popup()
+	$TimerPopup/Timer/ms.start()
+	Player.set_physics_process(true)
+	pass 
 
 func _on_Timer_no_time():
-	$Timer.set_process(false)
-	$Timer/ms.stop()
-	var noTimeBg = Sprite.new()
-	var noTimeIcon = preload("res://images/timesUp.png")
-	var scale = Vector2(0.4, 0.4)
-	noTimeBg.set_texture(noTimeIcon)
-	noTimeBg.set_scale(scale)
-	noTimeBg.position.x = 499.059
-	noTimeBg.position.y = 65.183
-	self.add_child(noTimeBg)
+	
+	$Questions.hide()
+	gameTimer.set_process(false)
+	$TimerPopup/Timer/ms.stop()
+	$TimerPopup/bg.hide()
+	
+	#var noTimeBg = Sprite.new()
+	
+	#var noTimeIcon = preload("res://images/timesUp.png")
+	#var scale = Vector2(0.4, 0.4)
+	
+	#noTimeBg.set_texture(noTimeIcon)
+	#noTimeBg.set_scale(scale)
+	#noTimeBg.position.x = 499.059
+	#noTimeBg.position.y = 65.183
+	#self.add_child(noTimeBg)
+	$TimeUpPopup.popup()
+	
+	Player.set_physics_process(false)
 	pass

@@ -24,12 +24,12 @@ position = Vector2( 37.2596, 193.23 )
 scale = Vector2( 0.0777063, 0.0777063 )
 normal = ExtResource( 4 )
 
-[node name="usercreations" type="TouchScreenButton" parent="."]
+[node name="assignments" type="TouchScreenButton" parent="."]
 position = Vector2( 714.971, 194.458 )
 scale = Vector2( 0.0777063, 0.0777063 )
 normal = ExtResource( 4 )
 
-[node name="assignments" type="TouchScreenButton" parent="."]
+[node name="usercreations" type="TouchScreenButton" parent="."]
 position = Vector2( 381.026, 192.002 )
 scale = Vector2( 0.0777063, 0.0777063 )
 normal = ExtResource( 4 )
