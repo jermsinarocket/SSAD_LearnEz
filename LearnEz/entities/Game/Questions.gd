@@ -21,7 +21,8 @@ func loadCurrentQuestion():
 	
 	for item in self.get_children():
 		item.show()
-		
+	$correctWrongAni.hide()
+	
 	get_parent().get_node("TimerPopup").popup()
 	
 	loadEnemy()
@@ -47,6 +48,7 @@ func loadEnemy():
 		if(item.get_index() == randomEnemyIndex):
 			enemy = item
 			enemy.show()
+			enemy.frame = 1
 			enemy.play("idle")
 		else:
 			item.hide()
@@ -98,21 +100,27 @@ func highlightCorrectOption():
 func handleCorrect():
 	enemy.play("down")
 	gameModel.increaseDifficulty()
-	resetAll()
+	playCorrectWrongAni("correct")
 	pass
 	
 func handleWrong():
 	enemy.play("swing")
 	gameModel.decreaseDifficulty()
+	playCorrectWrongAni("wrong")
 	pass
 
-
+func playCorrectWrongAni(value):
+	$correctWrongAni.show()
+	$correctWrongAni.play(value)
+		
 func resetAll():
-#	for button in $questionOptions.get_children():
-#		if(button.get_index() == correctOption):
-#			button.modulate = Color((255/255), (165/255), 0)
-#		else:
-#			button.modulate = Color((255/255), (165/255), 0)
-#
+	for button in $questionOptions.get_children():
+		button.modulate = Color(1, 1,1,1)
 	for item in self.get_children():
 		item.hide()
+	pass
+
+func _on_correctWrongAni_animation_finished():
+	resetAll()
+	$correctWrongAni.frame = 1
+	pass 

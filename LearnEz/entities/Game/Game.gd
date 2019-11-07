@@ -6,6 +6,7 @@ onready var Player = $Player
 func _ready():
 	root.set_screen_orientation(0)
 	get_tree().set_auto_accept_quit(false)
+	$TimerPopup/bg.modulate = Color(1,1,1,0.5)
 	loadQuestions()
 	pass
 
