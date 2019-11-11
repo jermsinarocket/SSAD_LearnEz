@@ -452,6 +452,7 @@ position = Vector2( -0.499998, 3 )
 scale = Vector2( 0.277447, 0.265736 )
 frames = ExtResource( 5 )
 animation = "avatar1"
+frame = 1
 playing = true
 offset = Vector2( 50, 50 )
 
@@ -473,7 +474,7 @@ scale = Vector2( 1.28135, 2.00009 )
 z_as_relative = false
 frames = SubResource( 3 )
 animation = "play"
-frame = 3
+frame = 4
 playing = true
 
 [node name="avatarAni" type="AnimatedSprite" parent="Questions"]
@@ -481,6 +482,7 @@ position = Vector2( 354.162, 235.12 )
 scale = Vector2( 1.24558, 1.24558 )
 frames = ExtResource( 5 )
 animation = "avatar1"
+frame = 1
 playing = true
 
 [node name="Enemies" type="Control" parent="Questions"]

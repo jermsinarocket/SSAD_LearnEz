@@ -105,7 +105,7 @@ func generate_enemies():
 		for y in height:
 			nodelist.append(Vector2(x,y))
 	nodelist.pop_front()
-	for x in range(6):
+	for x in range(8):
 		nodelist = shuffleList(nodelist)
 		var pos = nodelist.pop_front()
 		enemyloc.append(pos)
